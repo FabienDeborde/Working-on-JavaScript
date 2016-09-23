@@ -9,9 +9,23 @@ head
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css", integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj", crossorigin="anonymous")
   title JavaScript bases
 body
-  .container
+  .container.content
+    .row
+      h1 Custom Sign Service
+      h4 ($5 per tile)
+    
+    .row.input
+      .col-xs-12 
+        form(name="signForm" method="post" onsubmit="return false;")
+          input#sign(type="text" placeholder="Enter your sign here then tap Enter" onchange="updateValue()")
+    
+    .row.price
+      .col-xs-6 Preview :
+      .col-xs-6#cost Cost: $5 per tile 
+    .row.preview
+      .col-xs-12#preview Your awesome sign
   
-    button.btn-lg.btn-danger click
+
   
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
