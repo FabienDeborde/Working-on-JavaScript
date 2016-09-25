@@ -10,7 +10,7 @@ head
   title JavaScript bases
 body
   // First script container: calculate a price depending on the number of letters entered 
-  .container.content
+  .container.firstScript
     .row
       h1 Custom Sign Service
       h4 ($5 per tile)
@@ -27,9 +27,27 @@ body
       .col-xs-12#preview Your awesome sign
       
   hr
+  .container.secondScript
+    #greeting.message Hello!
+    table.table.table-hover
+      tr
+        td Custom Sign:
+        td#userSign
+      tr
+        td Total tiles:
+        td#tiles
+      tr
+        td Subtotal:
+        td#subTotal $
+      tr
+        td Shipping:
+        td#shipping $
+      tr.table-warning
+        td Grand total:
+        td#grandTotal $
+    button.btn.btn-danger(type="button") Pay Now
   
-
-  
+  hr
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")
