@@ -127,3 +127,45 @@ body .fifthScript .row #converted {
   line-height: 58px;
   color: #7f8c8d;
 }
+
+body .sixthScript h1 {
+  margin-bottom: 50px;
+}
+
+body .sixthScript h4 {
+  color: #ecf0f1;
+  margin: 0 0 40px 0;
+  padding-top: 25px;
+}
+
+body .sixthScript .card {
+  color: #ecf0f1;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  background-image: url("placeimg_800_600_any.jpg");
+}
+
+body .sixthScript .card .availability {
+  width: 350px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-left: 400px;
+  margin-top: 250px;
+}
+
+body .sixthScript .card .availability .items {
+  width: 75%;
+  padding: 20px 0;
+  margin: auto;
+  font-size: 1.2em;
+  letter-spacing: 1.5px;
+}
+
+body .sixthScript .card .availability .items:last-child {
+  border-bottom: solid #ecf0f1 1px;
+}
+
+body .sixthScript .card .availability #item1 {
+  border-top: solid #ecf0f1 1px;
+}

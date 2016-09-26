@@ -217,5 +217,31 @@ elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
 
 
 /******************************************************
-********** Sixth script: Objects ****
+********** Sixth script: Objects Constructor **********
 ******************************************************/
+
+//Create the Object Constructor
+
+function Hotel(name, rooms, booked) {
+  this.name = name;
+  this.rooms = rooms;
+  this.booked = booked;
+  this.checkAvailability = function() {
+    return this.rooms - this.booked;
+  };
+}
+
+//Create 2 objects using the Constructor
+
+var hiltonHotel = new Hotel('Hilton', 135, 79);
+var toyokoinnHotel = new Hotel('Toyoko-Inn', 57, 45);
+
+
+// Update the page with the new content
+var details1 = hiltonHotel.name + ' rooms: ' + hiltonHotel.checkAvailability();
+var elHotel1 = document.getElementById('item1');
+elHotel1.textContent = details1;
+
+var details2 = toyokoinnHotel.name + ' rooms: ' + toyokoinnHotel.checkAvailability();
+var elHotel2 = document.getElementById('item2');
+elHotel2.textContent = details2;
