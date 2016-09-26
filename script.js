@@ -31,8 +31,6 @@ function updateValue(){
   elSign.textContent = signValue;
 }
 
-//////////////////////////////////////////////////////////////////
-
 /******************************************************
 ********** Second script: Order check Script ***********
 *******************************************************/
@@ -75,3 +73,149 @@ elShipping.textContent = '$' + shipping;
 //Get the element that has an id of grandTotal then update its contents
 var elGrandTotal = document.getElementById('grandTotal');
 elGrandTotal.textContent = '$' + grandTotal;
+
+/******************************************************
+********** Third script: Simple function **************
+*******************************************************/
+
+//A simple function that update a node text content
+var msg = "Sign up to receive our newsletter for 10% off!";
+function updateMessage() {
+  var elMessage = document.getElementById('message');
+  elMessage.textContent = msg;
+}
+updateMessage();
+
+
+/******************************************************
+********** Fourth script: Array returning function ****
+******************************************************/
+
+function updateSize(){
+
+//Create variables to store the geometric form dimensions entered by the user
+
+  var width = document.getElementById('width').value;
+  var height = document.getElementById('height').value;
+  var depth = document.getElementById('depth').value;
+
+  // Creating a function to do the calculation and returning an array of the results
+
+  function getSize(width, height, depth) {
+    var area = width * height;
+    var volume = width * height * depth;
+    var sizes = [area, volume];
+    return sizes;
+  }
+
+//Updating the nodes text content with the returned values
+
+  var elArea = document.getElementById('area');
+  elArea.textContent = getSize(width, height, depth)[0];
+
+  var elVolume = document.getElementById('volume');
+  elVolume.textContent = getSize(width, height, depth)[1];
+
+}
+
+/******************************************************
+********** Fifth script: Objects ****
+******************************************************/
+
+// Creating my meter Object
+
+// Temperature Object
+
+var meter = {
+  name: 'Temperatures',
+  unit: ' °C',
+  value: 0,
+  convertedUnit: ' °F',
+  colorR: 52,
+  colorG: 152,
+  colorB: 219,
+  add: 1,
+  substract: 1,
+  // Converting the Celcius value to Fahrenheit and rounding it to 1 decimal
+  conversionToF: function(){
+    return Math.round((this.value*1.8+32) * 10) / 10;
+  },
+  // Adding to the base value and updating the content and background color
+  buttonAdd: function(){
+    this.value += this.add;
+    elResult.textContent = meter.value + meter.unit;
+    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+    elResult.style.backgroundColor = meter.colorBG();
+  },
+  // Substracting to the base value and updating the content and background color
+  buttonSubstract: function(){
+    this.value -= this.substract;
+    elResult.textContent = meter.value + meter.unit;
+    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+    elResult.style.backgroundColor = meter.colorBG();
+  },
+  // Update the background color
+  colorBG: function(){
+    this.colorR = Math.round(3.520833333*0.001 * (this.value * this.value * this.value) - 0.02125 * (this.value * this.value) - 1.283333333 * this.value + 52);
+    this.colorG = Math.round(-4.729166667*0.001 * (this.value * this.value * this.value) + 0.035 * (this.value * this.value) + 3.791666667 * this.value + 152);
+    this.colorB = Math.round(3.666666667*0.001 * (this.value * this.value * this.value) - 0.175 * (this.value * this.value) - 3.266666667 * this.value + 219);
+    colorRGB ='rgb(' + this.colorR + ', ' + this.colorG + ', ' + this.colorB +')';
+    if (this.value < -20){
+      colorRGB ='rgb(41,128,185)';
+    }
+    else if (this.value > 40){
+      colorRGB ='rgb(192, 57, 43)';
+    }
+    return colorRGB;
+  }
+}
+
+/*
+// Kilometer Object
+var meter = {
+  name: 'Kilometers',
+  unit: ' km',
+  value: 0,
+  convertedUnit: ' mi',
+  add: 0.5,
+  substract: 0.5,
+  // Converting the kilometer value to miles and rounding it to 2 decimals
+  conversionToF: function(){
+    return Math.round(this.value*0.621371 * 100) / 100;
+  },
+  // Adding to the base value
+  buttonAdd: function(){
+    this.value += this.add;
+    elResult.textContent = meter.value + meter.unit;
+    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+    return this.value;
+  },
+  // Substracting to the base value
+  buttonSubstract: function(){
+    this.value -= this.substract;
+    elResult.textContent = meter.value + meter.unit;
+    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+    return this.value;
+  }
+}
+*/
+
+
+// Updating the static display text content
+var elTitle = document.getElementById('title');
+elTitle.textContent = meter.name;
+
+var elResult = document.getElementById('result');
+elResult.textContent = meter.value + meter.unit;
+elResult.style.backgroundColor = meter.colorBG();
+
+var elConverted = document.getElementById('converted');
+elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+
+
+
+
+
+/******************************************************
+********** Sixth script: Objects ****
+******************************************************/

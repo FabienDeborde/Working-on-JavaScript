@@ -48,6 +48,50 @@ body
     button.btn.btn-danger(type="button") Pay Now
   
   hr
+  .container.thirdScript
+    #message.alert.alert-info Welcome !
+  
+  hr
+  .container.fourthScript
+    h1 Let's do some maths!
+    .row
+      form(name="getSize" method="post" onsubmit="return false;")
+        .col-xs-3.message.text-primary Enter the following infos:
+        .col-xs-3 
+          input#width(type="text" placeholder="Width")
+        .col-xs-3
+          input#height(type="text" placeholder="Height")
+        .col-xs-3
+          input#depth(type="text" placeholder="Depth")
+    .row
+      button.btn-lg.btn-outline-primary#submit(type="submit", form="getSize", value="Calculate!", onclick="updateSize()") Calculate!
+          
+    table.table.table-hover.text-primary
+      tr
+        td Area:
+        td#area
+      tr
+        td Volume
+        td#volume
+  
+  hr
+  .container.fifthScript
+    h1 Let's play with Objects!
+    h4#title Temperature
+    .row
+      .col-xs-2.offset-xs-3
+        button.btn-lg.btn-info(onclick="meter.buttonSubstract()") -
+      .col-xs-2
+        #result 
+      .col-xs-2
+        button.btn-lg.btn-danger(onclick="meter.buttonAdd()") +
+    .row
+      .col-xs-12
+        #converted 
+        
+  hr
+  .container
+    
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")

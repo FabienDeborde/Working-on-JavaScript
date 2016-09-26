@@ -76,3 +76,54 @@ body .secondScript #greeting {
 body .secondScript table tr td:first-child {
   font-weight: bold;
 }
+
+body .fourthScript form {
+  margin-top: 50px;
+}
+
+body .fourthScript form .message {
+  font-size: 1.3em;
+  color: #232b2b;
+  vertical-align: middle;
+  line-height: 45px;
+}
+
+body .fourthScript form input {
+  padding: 10px 20px;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+body .fourthScript button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+body .fourthScript table {
+  max-width: 50%;
+  margin: auto;
+}
+
+body .fifthScript h4 {
+  margin-top: 40px;
+}
+
+body .fifthScript .row {
+  margin-top: 50px;
+}
+
+body .fifthScript .row button {
+  width: 70px;
+}
+
+body .fifthScript .row #result {
+  font-size: 2.5em;
+  line-height: 58px;
+  color: #ecf0f1;
+}
+
+body .fifthScript .row #converted {
+  font-size: 1.6em;
+  line-height: 58px;
+  color: #7f8c8d;
+}
