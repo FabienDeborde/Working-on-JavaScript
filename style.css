@@ -251,3 +251,37 @@ body .ninthScript .card-text {
   line-height: 40px;
   text-align: center;
 }
+
+body .tenthScript .card {
+  max-width: 520px;
+  margin: 50px auto 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(200, 200, 200, 0.1);
+}
+
+body .tenthScript hr {
+  border-top: solid 1px #5bc0de;
+}
+
+body .tenthScript h4 {
+  font-size: 1.7em;
+}
+
+body .tenthScript #originalNumber {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+body .tenthScript .numberText {
+  font-size: 1.3em;
+}
+
+body .tenthScript h6 {
+  font-size: 1.2em;
+  color: slategray;
+}
+
+body .tenthScript .slimSeparator {
+  width: 50%;
+  margin: 30px auto 30px auto;
+}

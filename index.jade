@@ -104,7 +104,7 @@ body
     h1 Browser Object Model: the 
       i Window Object
     .card.card-block.card-outline-warning
-      img.card-img-top(src="http://placeimg.com/480/320/arch" alt="Card image cap")
+      img.card-img-top(src="http://placeimg.com/480/320/tech" alt="Card image cap")
       hr.separator
       .card-title Browser window infos
       p 
@@ -157,7 +157,7 @@ body
     h1 Global Objects: the 
       i String Object
     .card.card-block.card-outline-success
-      img.card-img-top(src="http://placeimg.com/480/320/tech" alt="Card image cap")
+      img.card-img-top(src="http://placeimg.com/480/320/tech/sepia" alt="Card image cap")
       hr.separator
       .card-title#saying Sample string test
       .card-text
@@ -165,7 +165,39 @@ body
         
   hr
   .container.tenthScript
-    
+    h1 Working with numbers
+    .card.card-outline-info
+      h4 Original number
+      #originalNumber 2
+      hr
+      h6 Round to 3 decimal places
+      #fixedDigits
+      hr.slimSeparator
+      .numberText
+      h6 3 digits
+      #precisedDigits
+      hr
+      h4 Math Object
+      h6 Pi
+      #pi
+      hr.slimSeparator
+      h6 Round (to the nearest integer)
+      #round
+      hr.slimSeparator
+      h6 Ceil (round up to the nearest integer)
+      #ceil
+      hr.slimSeparator
+      h6 Floor (round down to the nearest integer)
+      #floor
+      hr.slimSeparator
+      h6 Square root (of 9)
+      #square
+      hr.slimSeparator
+      h6 Random ( 0 <= number < 1 )
+      #random
+      hr.slimSeparator
+  hr
+  .container.eleventhScript
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")

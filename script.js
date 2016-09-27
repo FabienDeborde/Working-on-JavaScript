@@ -283,7 +283,7 @@ elPage.innerHTML = msg;
 
 
 /******************************************************
-********** Ninth script: Global Objects ***************
+********** Ninth script: Global Objects : String ******
 ******************************************************/
 var saying = 'Sample string test ';
 elSaying = document.getElementById('saying');
@@ -302,3 +302,38 @@ stringMsg += '<tr><td><i>Replace "string" with "phrase" : </i><b>' + saying.repl
 
 elResult = document.getElementById('stringResult');
 elResult.innerHTML = stringMsg;
+
+
+/******************************************************
+********** Tenth script: Global Objects : Numbers *****
+******************************************************/
+
+var originalNumber = 10.23456789;
+var pi = Math.PI;
+
+var elOriginal = document.getElementById('originalNumber');
+elOriginal.textContent = originalNumber;
+
+var elFixed = document.getElementById('fixedDigits');
+elFixed.textContent = originalNumber.toFixed(3);
+
+var elPrecised = document.getElementById('precisedDigits');
+elPrecised.textContent = originalNumber.toPrecision(3);
+
+var elPi = document.getElementById('pi');
+elPi.textContent = Math.PI;
+
+var elRound = document.getElementById('round');
+elRound.textContent = Math.round(pi);
+
+var elSquare = document.getElementById('square');
+elSquare.textContent = Math.sqrt(9);
+
+var elCeil = document.getElementById('ceil');
+elCeil.textContent = Math.ceil(pi);
+
+var elFloor = document.getElementById('floor');
+elFloor.textContent = Math.floor(pi);
+
+var elRandom = document.getElementById('random');
+elRandom.textContent = Math.random();
