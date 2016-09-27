@@ -9,9 +9,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"/>
   <title>JavaScript bases</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="#mainNav">
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div id="mainNav">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link">Home </a></li>
+        <li class="nav-item"><a href="#script1" class="nav-link">Script 1</a></li>
+        <li class="nav-item"><a href="#script2" class="nav-link">Script 2</a></li>
+        <li class="nav-item"><a href="#script3" class="nav-link">Script 3</a></li>
+        <li class="nav-item"><a href="#script4" class="nav-link">Script 4</a></li>
+        <li class="nav-item"><a href="#script5" class="nav-link">Script 5</a></li>
+        <li class="nav-item"><a href="#script6" class="nav-link">Script 6</a></li>
+        <li class="nav-item"><a href="#script7" class="nav-link">Script 7</a></li>
+        <li class="nav-item"><a href="#script8" class="nav-link">Script 8</a></li>
+        <li class="nav-item"><a href="#script9" class="nav-link">Script 9</a></li>
+        <li class="nav-item"><a href="#script10" class="nav-link">Script 10</a></li>
+        <li class="nav-item"><a href="#script11" class="nav-link">Script 11</a></li>
+      </ul>
+    </div>
+  </nav>
   <!-- First script container: calculate a price depending on the number of letters entered -->
-  <div class="container firstScript">
+  <div id="script1" class="container firstScript">
     <div class="row">
       <h1>Custom Sign Service</h1>
       <h4>($5 per tile)</h4>
@@ -32,7 +50,7 @@
     </div>
   </div>
   <hr/>
-  <div class="container secondScript">
+  <div id="script2" class="container secondScript">
     <div id="greeting" class="message">Hello!</div>
     <table class="table table-hover">
       <tr>
@@ -59,11 +77,11 @@
     <button type="button" class="btn btn-danger">Pay Now</button>
   </div>
   <hr/>
-  <div class="container thirdScript">
+  <div id="script3" class="container thirdScript">
     <div id="message" class="alert alert-info">Welcome !</div>
   </div>
   <hr/>
-  <div class="container fourthScript">
+  <div id="script4" class="container fourthScript">
     <h1>Let's do some maths!</h1>
     <div class="row">
       <form name="getSize" method="post" onsubmit="return false;">
@@ -94,7 +112,7 @@
     </table>
   </div>
   <hr/>
-  <div class="container fifthScript">
+  <div id="script5" class="container fifthScript">
     <h1>Let's play with Objects!</h1>
     <h4 id="title">Temperature</h4>
     <div class="row">
@@ -115,7 +133,7 @@
     </div>
   </div>
   <hr/>
-  <div class="container sixthScript">
+  <div id="script6" class="container sixthScript">
     <h1>Why do I need Constructors!?</h1>
     <div class="card">
       <div class="availability"> 
@@ -126,7 +144,7 @@
     </div>
   </div>
   <hr/>
-  <div class="container seventhScript">
+  <div id="script7" class="container seventhScript">
     <h1>Browser Object Model: the <i>Window Object</i></h1>
     <div class="card card-block card-outline-warning"><img src="http://placeimg.com/480/320/tech" alt="Card image cap" class="card-img-top"/>
       <hr class="separator"/>
@@ -146,7 +164,7 @@
     </div>
   </div>
   <hr/>
-  <div class="container eighthScript">
+  <div id="script8" class="container eighthScript">
     <h1>Document Object Model: the <i>Document Object</i></h1>
     <div class="card card-block card-outline-danger"><img src="http://placeimg.com/480/320/tech/grayscale" alt="Card image cap" class="card-img-top"/>
       <hr class="separator"/>
@@ -159,7 +177,7 @@
     </div>
   </div>
   <hr/>
-  <div class="container ninthScript">
+  <div id="script9" class="container ninthScript">
     <h1>Global Objects: the <i>String Object</i></h1>
     <div class="card card-block card-outline-success"><img src="http://placeimg.com/480/320/tech/sepia" alt="Card image cap" class="card-img-top"/>
       <hr class="separator"/>
@@ -170,44 +188,53 @@
     </div>
   </div>
   <hr/>
-  <div class="container tenthScript">
+  <div id="script10" class="container tenthScript">
     <h1>Working with numbers</h1>
     <div class="card card-outline-info">
-      <h4>Original number</h4>
+      <h4>Number Object</h4>
       <div id="originalNumber">2</div>
       <hr/>
-      <h6>Round to 3 decimal places</h6>
+      <h6>originalNumber.toFixed(): Round to (3) decimal places</h6>
       <div id="fixedDigits"></div>
       <hr class="slimSeparator"/>
       <div class="numberText"></div>
-      <h6>3 digits</h6>
+      <h6>originalNumber.toPrecision(): (3) digits</h6>
       <div id="precisedDigits"></div>
       <hr/>
       <h4>Math Object</h4>
-      <h6>Pi</h6>
+      <h6>Math.PI</h6>
       <div id="pi"></div>
       <hr class="slimSeparator"/>
-      <h6>Round (to the nearest integer)</h6>
+      <h6>Math.round(): round to the nearest integer</h6>
       <div id="round"></div>
       <hr class="slimSeparator"/>
-      <h6>Ceil (round up to the nearest integer)</h6>
+      <h6>Math.ceil: round up to the nearest integer</h6>
       <div id="ceil"></div>
       <hr class="slimSeparator"/>
-      <h6>Floor (round down to the nearest integer)</h6>
+      <h6>Math.floor(): round down to the nearest integer</h6>
       <div id="floor"></div>
       <hr class="slimSeparator"/>
-      <h6>Square root (of 9)</h6>
+      <h6>Math.sqrt(): Square root (of 9 here)</h6>
       <div id="square"></div>
       <hr class="slimSeparator"/>
-      <h6>Random ( 0 <= number < 1 )</h6>
+      <h6>Math.random(): random number ( 0 <= number < 1 )</h6>
       <div id="random"></div>
+      <hr class="slimSeparator"/>
+      <h6>Generate random whole numbers within a range</h6><br/>
+      <p>Math.floor(Math.random() * 10) : 0 &le; n < 10</p>
+      <div id="randomInteger1"></div><br/>
+      <p>Math.floor(Math.random() * (max-min+1) + min) : min &le; n &le; max</p>
+      <div id="randomInteger2"></div><br/>
+      <p>Math.floor(Math.random() * (max-min) + min) : min &le; n &lt; max</p>
+      <div id="randomInteger3"></div>
       <hr class="slimSeparator"/>
     </div>
   </div>
   <hr/>
-  <div class="container eleventhScript"></div>
+  <div id="script11" class="container eleventhScript"></div>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  <script src="scrollspy.js"></script>
   <script src="script.js"></script>
 </body>

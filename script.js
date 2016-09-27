@@ -337,3 +337,12 @@ elFloor.textContent = Math.floor(pi);
 
 var elRandom = document.getElementById('random');
 elRandom.textContent = Math.random();
+
+var elInteger1 = document.getElementById('randomInteger1');
+elInteger1.textContent = Math.floor(Math.random() * 10);
+
+var elInteger2 = document.getElementById('randomInteger2');
+elInteger2.textContent = '5 ≤ n ≤ 15 ⇒ ' + Math.floor(Math.random() * 11 + 5);
+
+var elInteger3 = document.getElementById('randomInteger3');
+elInteger3.textContent = '100 ≤ n ≤ 900 ⇒ ' + Math.floor(Math.random() * 900 + 100);

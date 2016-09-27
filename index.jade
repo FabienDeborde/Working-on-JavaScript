@@ -8,9 +8,39 @@ head
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.min.css")
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css", integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj", crossorigin="anonymous")
   title JavaScript bases
-body
+  
+body(data-spy="scroll" data-target="#mainNav")
+  
+  nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+    #mainNav
+      ul.nav.navbar-nav
+        li.nav-item
+          a.nav-link(href="#") Home 
+        li.nav-item
+          a.nav-link(href="#script1") Script 1
+        li.nav-item
+          a.nav-link(href="#script2") Script 2
+        li.nav-item
+          a.nav-link(href="#script3") Script 3
+        li.nav-item
+          a.nav-link(href="#script4") Script 4
+        li.nav-item
+          a.nav-link(href="#script5") Script 5
+        li.nav-item
+          a.nav-link(href="#script6") Script 6
+        li.nav-item
+          a.nav-link(href="#script7") Script 7
+        li.nav-item
+          a.nav-link(href="#script8") Script 8
+        li.nav-item
+          a.nav-link(href="#script9") Script 9
+        li.nav-item
+          a.nav-link(href="#script10") Script 10
+        li.nav-item
+          a.nav-link(href="#script11") Script 11
+
   // First script container: calculate a price depending on the number of letters entered 
-  .container.firstScript
+  .container.firstScript#script1
     .row
       h1 Custom Sign Service
       h4 ($5 per tile)
@@ -27,7 +57,7 @@ body
       .col-xs-12#preview Your awesome sign
       
   hr
-  .container.secondScript
+  .container.secondScript#script2
     #greeting.message Hello!
     table.table.table-hover
       tr
@@ -48,11 +78,11 @@ body
     button.btn.btn-danger(type="button") Pay Now
   
   hr
-  .container.thirdScript
+  .container.thirdScript#script3
     #message.alert.alert-info Welcome !
   
   hr
-  .container.fourthScript
+  .container.fourthScript#script4
     h1 Let's do some maths!
     .row
       form(name="getSize" method="post" onsubmit="return false;")
@@ -75,7 +105,7 @@ body
         td#volume
   
   hr
-  .container.fifthScript
+  .container.fifthScript#script5
     h1 Let's play with Objects!
     h4#title Temperature
     .row
@@ -90,7 +120,7 @@ body
         #converted 
         
   hr
-  .container.sixthScript
+  .container.sixthScript#script6
     h1 Why do I need Constructors!?
     .card
       .availability  
@@ -100,7 +130,7 @@ body
         
         
   hr      
-  .container.seventhScript
+  .container.seventhScript#script7
     h1 Browser Object Model: the 
       i Window Object
     .card.card-block.card-outline-warning
@@ -134,7 +164,7 @@ body
       
       
   hr
-  .container.eighthScript
+  .container.eighthScript#script8
     h1 Document Object Model: the 
       i Document Object
     .card.card-block.card-outline-danger
@@ -153,7 +183,7 @@ body
           b#lastModified
       
   hr
-  .container.ninthScript
+  .container.ninthScript#script9
     h1 Global Objects: the 
       i String Object
     .card.card-block.card-outline-success
@@ -164,42 +194,56 @@ body
         table.table.table-hover.table-success#stringResult
         
   hr
-  .container.tenthScript
+  .container.tenthScript#script10
     h1 Working with numbers
     .card.card-outline-info
-      h4 Original number
+      h4 Number Object
       #originalNumber 2
       hr
-      h6 Round to 3 decimal places
+      h6 originalNumber.toFixed(): Round to (3) decimal places
       #fixedDigits
       hr.slimSeparator
       .numberText
-      h6 3 digits
+      h6 originalNumber.toPrecision(): (3) digits
       #precisedDigits
       hr
       h4 Math Object
-      h6 Pi
+      h6 Math.PI
       #pi
       hr.slimSeparator
-      h6 Round (to the nearest integer)
+      h6 Math.round(): round to the nearest integer
       #round
       hr.slimSeparator
-      h6 Ceil (round up to the nearest integer)
+      h6 Math.ceil: round up to the nearest integer
       #ceil
       hr.slimSeparator
-      h6 Floor (round down to the nearest integer)
+      h6 Math.floor(): round down to the nearest integer
       #floor
       hr.slimSeparator
-      h6 Square root (of 9)
+      h6 Math.sqrt(): Square root (of 9 here)
       #square
       hr.slimSeparator
-      h6 Random ( 0 <= number < 1 )
+      h6 Math.random(): random number ( 0 <= number < 1 )
       #random
       hr.slimSeparator
+      h6 Generate random whole numbers within a range
+      br 
+      p Math.floor(Math.random() * 10) : 0 &le; n < 10
+      #randomInteger1
+      br 
+      p Math.floor(Math.random() * (max-min+1) + min) : min &le; n &le; max
+      #randomInteger2
+      br
+      p Math.floor(Math.random() * (max-min) + min) : min &le; n &lt; max
+      #randomInteger3
+      hr.slimSeparator
+      
+      
   hr
-  .container.eleventhScript
+  .container.eleventhScript#script11
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js", integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU", crossorigin="anonymous")
+  script(src="scrollspy.js")
   script(src="script.js")
