@@ -245,3 +245,38 @@ elHotel1.textContent = details1;
 var details2 = toyokoinnHotel.name + ' rooms: ' + toyokoinnHotel.checkAvailability();
 var elHotel2 = document.getElementById('item2');
 elHotel2.textContent = details2;
+
+
+/******************************************************
+********** Seventh script: Browser Object Model *******
+******************************************************/
+
+var elWindowWidth = document.getElementById('windowWidth');
+elWindowWidth.textContent = window.innerWidth;
+
+var elWindowHeight = document.getElementById('windowHeight');
+elWindowHeight.textContent = window.innerHeight;
+
+var elHistory = document.getElementById('history');
+elHistory.textContent = window.history.length;
+
+var elScreenWidth = document.getElementById('screenWidth');
+elScreenWidth.textContent = window.screen.width;
+
+var elScreenHeight = document.getElementById('screenHeight');
+elScreenHeight.textContent = window.screen.height;
+
+var elWindowLoc = document.getElementById('address');
+elWindowLoc.textContent = window.location;
+
+
+/******************************************************
+********** Eighth script: Document Object Model *******
+******************************************************/
+
+var msg = '<p><i>Page title: </i><b>' + document.title + '</b> <br />';
+msg += '<p><i>Page address: </i><b>' + document.URL + '</b> <br />';
+msg += '<p><i>Last modified: </i><b>' + document.lastModified + '</b> </p>';
+
+var elPage = document.getElementById('aboutPage');
+elPage.innerHTML = msg;

@@ -100,8 +100,59 @@ body
         
         
   hr      
-  .container    
-  
+  .container.seventhScript
+    h1 Browser Object Model: the 
+      i Window Object
+    .card.card-block.card-outline-warning
+      img.card-img-top(src="http://placeimg.com/480/320/tech" alt="Card image cap")
+      hr.separator
+      .card-title Browser window infos
+      p 
+        i width: 
+        b#windowWidth 
+      p
+        i height: 
+        b#windowHeight
+      hr.separator
+      .card-title History data
+      p 
+        i items: 
+        b#history
+      hr.separator
+      .card-title Screen
+      p
+        i width: 
+        b#screenWidth
+      p
+        i height: 
+        b#screenHeight
+      hr.separator
+      .card-title Current page
+      p 
+        i address: 
+        b#address
+      
+      
+  hr
+  .container.eighthScript
+    h1 Document Object Model: the 
+      i Document Object
+    .card.card-block.card-outline-danger
+      img.card-img-top(src="http://placeimg.com/480/320/tech" alt="Card image cap")
+      hr.separator
+      .card-title About this page
+      .card-text#aboutPage
+        p 
+          i Page title: 
+          b#pageTitle
+        p 
+          i Page address: 
+          b#pageAddress
+        p 
+          i Last modified: 
+          b#lastModified
+      
+    
     
   
   script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
