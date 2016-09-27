@@ -179,45 +179,75 @@ body .seventhScript .card img {
   margin-bottom: 30px;
 }
 
-body .seventhScript .card .card-title {
+body .seventhScript .card-title {
   margin: 30px 0 30px 0;
   color: #2c3e50;
   font-size: 1.8em;
 }
 
-body .seventhScript .card .separator {
+body .seventhScript .separator {
   border: 1px solid rgba(248, 148, 6, 0.2);
   margin: 0;
 }
 
-body .seventhScript .card .separator:nth-child(3) {
+body .seventhScript .separator:nth-child(3) {
   margin-bottom: 30px;
 }
 
-.eighthScript .card {
+body .eighthScript .card {
   max-width: 520px;
   margin: auto;
 }
 
-.eighthScript .card img {
+body .eighthScript .card img {
   margin-bottom: 30px;
 }
 
-.eighthScript .card .card-title {
+body .eighthScript .card-title {
   margin: 30px 0 30px 0;
   color: #2c3e50;
   font-size: 1.8em;
 }
 
-.eighthScript .card .separator {
+body .eighthScript .separator {
   border: 1px solid rgba(217, 83, 79, 0.2);
   margin: 0;
   margin-bottom: 30px;
 }
 
-.eighthScript .card .card-text {
+body .eighthScript .card-text {
   margin-top: 30px;
   color: #34495e;
   font-size: 1em;
+  text-align: center;
+  line-height: 40px;
+}
+
+body .ninthScript .card {
+  max-width: 520px;
+  margin: auto;
+}
+
+body .ninthScript .card img {
+  margin-bottom: 30px;
+}
+
+body .ninthScript .card-title {
+  margin: 30px 0 30px 0;
+  color: #2c3e50;
+  font-size: 1.8em;
+}
+
+body .ninthScript .separator {
+  border: 1px solid rgba(92, 184, 92, 0.2);
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+body .ninthScript .card-text {
+  margin-top: 30px;
+  color: #34495e;
+  font-size: 1em;
+  line-height: 40px;
   text-align: center;
 }

@@ -275,8 +275,30 @@ elWindowLoc.textContent = window.location;
 ******************************************************/
 
 var msg = '<p><i>Page title: </i><b>' + document.title + '</b> <br />';
-msg += '<p><i>Page address: </i><b>' + document.URL + '</b> <br />';
-msg += '<p><i>Last modified: </i><b>' + document.lastModified + '</b> </p>';
+msg += '<i>Page address: </i><b>' + document.URL + '</b> <br />';
+msg += '<i>Last modified: </i><b>' + document.lastModified + '</b> </p>';
 
 var elPage = document.getElementById('aboutPage');
 elPage.innerHTML = msg;
+
+
+/******************************************************
+********** Ninth script: Global Objects ***************
+******************************************************/
+var saying = 'Sample string test ';
+elSaying = document.getElementById('saying');
+elSaying.textContent = saying;
+
+var stringMsg = '<tr><td><i>Length: </i><b>' + saying.length + '</b></td></tr>';
+stringMsg += '<tr><td><i>Uppercase: </i><b>' + saying.toUpperCase() + '</b> </td></tr>';
+stringMsg += '<tr><td><i>Lowercase: </i><b>' + saying.toLowerCase() + '</b> </td></tr>';
+stringMsg += '<tr><td><i>5th character: </i><b>' + saying.charAt(4) + '</b> </td></tr>';
+stringMsg += '<tr><td><i>Where is "in": </i><b>' + saying.indexOf('in') + '</b> </td></tr>';
+stringMsg += '<tr><td><i>Where is the last "s": </i><b>' + saying.lastIndexOf('s') + '</b> </td></tr>';
+stringMsg += '<tr><td><i>What are the characters between p and g: </i><b>' + saying.substring(4,12) + '</b> </td></tr>';
+stringMsg += '<tr><td><i>What are the words here : </i><b>' + saying.split(' ') + '</b> </td></tr>';
+stringMsg += '<tr><td><i>Delete the ending space: </i><b>' + saying.trim() + '</b> </td></tr>';
+stringMsg += '<tr><td><i>Replace "string" with "phrase" : </i><b>' + saying.replace('string','phrase') + '</b> </td></tr>';
+
+elResult = document.getElementById('stringResult');
+elResult.innerHTML = stringMsg;
