@@ -127,10 +127,9 @@ function updateSize(){
 ********** Fifth script: Objects ****
 ******************************************************/
 
-// Creating my meter Object
+// Creating my meter Objects
 
 // Temperature Object
-
 var meter = {
   name: 'Temperatures',
   unit: ' °C',
@@ -148,16 +147,16 @@ var meter = {
   // Adding to the base value and updating the content and background color
   buttonAdd: function(){
     this.value += this.add;
-    elResult.textContent = meter.value + meter.unit;
-    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
-    elResult.style.backgroundColor = meter.colorBG();
+    elResultObj.textContent = meter.value + meter.unit;
+    elConvertedObj.textContent = meter.conversionToF() + meter.convertedUnit;
+    elResultObj.style.backgroundColor = meter.colorBG();
   },
   // Substracting to the base value and updating the content and background color
   buttonSubstract: function(){
     this.value -= this.substract;
-    elResult.textContent = meter.value + meter.unit;
-    elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
-    elResult.style.backgroundColor = meter.colorBG();
+    elResultObj.textContent = meter.value + meter.unit;
+    elConvertedObj.textContent = meter.conversionToF() + meter.convertedUnit;
+    elResultObj.style.backgroundColor = meter.colorBG();
   },
   // Update the background color
   colorBG: function(){
@@ -175,7 +174,7 @@ var meter = {
   }
 }
 
-/*
+/* Other Objects
 // Kilometer Object
 var meter = {
   name: 'Kilometers',
@@ -207,15 +206,15 @@ var meter = {
 
 
 // Updating the static display text content
-var elTitle = document.getElementById('title');
-elTitle.textContent = meter.name;
+var elTitleObj = document.getElementById('titleObj');
+elTitleObj.textContent = meter.name;
 
-var elResult = document.getElementById('result');
-elResult.textContent = meter.value + meter.unit;
-elResult.style.backgroundColor = meter.colorBG();
+var elResultObj = document.getElementById('resultObj');
+elResultObj.textContent = meter.value + meter.unit;
+elResultObj.style.backgroundColor = meter.colorBG();
 
-var elConverted = document.getElementById('converted');
-elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
+var elConvertedObj = document.getElementById('convertedObj');
+elConvertedObj.textContent = meter.conversionToF() + meter.convertedUnit;
 
 
 
@@ -462,3 +461,9 @@ function updateTimer() {
 
     setTimeout(updateTimer, 1000);
 }
+
+
+
+/******************************************************
+********** Eleventh script: Global Objects : Date *****
+*******************************************************/

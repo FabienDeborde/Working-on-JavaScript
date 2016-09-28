@@ -123,13 +123,13 @@ body .fifthScript .row button {
   width: 70px;
 }
 
-body .fifthScript .row #result {
+body .fifthScript .row #resultObj {
   font-size: 2.5em;
   line-height: 58px;
   color: #ecf0f1;
 }
 
-body .fifthScript .row #converted {
+body .fifthScript .row #convertedObj {
   font-size: 1.6em;
   line-height: 58px;
   color: #7f8c8d;
