@@ -1,7 +1,6 @@
 /******************************************************
 ********** First script: Custom Sign Script ***********
 *******************************************************/
-
 // Define all variables
 
 var price;
@@ -34,58 +33,65 @@ function updateValue(){
 /******************************************************
 ********** Second script: Order check Script ***********
 *******************************************************/
+orderCheck();
 
-//Create variables for the welcome message
-var greeting = 'Hello ';
-var name = 'Myna';
-var message = ', please check your order:';
-  //Concatenate the 3 variables to create the message
-var welcome = greeting + name + message;
+function orderCheck() {
 
-//Create variables to hold details about the sign
-var sign = 'My awesome sign';
-var tiles = sign.length;
-var subTotal = tiles * 5;
-var shipping = 7;
-var grandTotal = subTotal + shipping;
+  //Create variables for the welcome message
+  var greeting = 'Hello ';
+  var name = 'Myna';
+  var message = ', please check your order:';
+    //Concatenate the 3 variables to create the message
+  var welcome = greeting + name + message;
 
-//Get the element that has an id of greeting
-var el = document.getElementById('greeting');
-//Replace its content with the personalized message
-el.textContent = welcome;
+  //Create variables to hold details about the sign
+  var sign = 'My awesome sign';
+  var tiles = sign.length;
+  var subTotal = tiles * 5;
+  var shipping = 7;
+  var grandTotal = subTotal + shipping;
 
-//Get the element that has an id of userSign then update its contents
-var elSign = document.getElementById('userSign');
-elSign.textContent = sign;
+  //Get the element that has an id of greeting
+  var el = document.getElementById('greeting');
+  //Replace its content with the personalized message
+  el.textContent = welcome;
 
-//Get the element that has an id of tiles then update its contents
-var elTiles = document.getElementById('tiles');
-elTiles.textContent = tiles;
+  //Get the element that has an id of userSign then update its contents
+  var elSign = document.getElementById('userSign');
+  elSign.textContent = sign;
 
-//Get the element that has an id of subTotal then update its contents
-var elSubTotal = document.getElementById('subTotal');
-elSubTotal.textContent = '$' + subTotal;
+  //Get the element that has an id of tiles then update its contents
+  var elTiles = document.getElementById('tiles');
+  elTiles.textContent = tiles;
 
-//Get the element that has an id of shipping then update its contents
-var elShipping = document.getElementById('shipping');
-elShipping.textContent = '$' + shipping;
+  //Get the element that has an id of subTotal then update its contents
+  var elSubTotal = document.getElementById('subTotal');
+  elSubTotal.textContent = '$' + subTotal;
 
-//Get the element that has an id of grandTotal then update its contents
-var elGrandTotal = document.getElementById('grandTotal');
-elGrandTotal.textContent = '$' + grandTotal;
+  //Get the element that has an id of shipping then update its contents
+  var elShipping = document.getElementById('shipping');
+  elShipping.textContent = '$' + shipping;
+
+  //Get the element that has an id of grandTotal then update its contents
+  var elGrandTotal = document.getElementById('grandTotal');
+  elGrandTotal.textContent = '$' + grandTotal;
+
+}
 
 /******************************************************
 ********** Third script: Simple function **************
 *******************************************************/
+simpleFunction();
 
-//A simple function that update a node text content
-var msg = "Sign up to receive our newsletter for 10% off!";
-function updateMessage() {
-  var elMessage = document.getElementById('message');
-  elMessage.textContent = msg;
+function simpleFunction() {
+  //A simple function that update a node text content
+  var msg = "Sign up to receive our newsletter for 20% off!";
+  function updateMessage() {
+    var elMessage = document.getElementById('message');
+    elMessage.textContent = msg;
+  }
+  updateMessage();
 }
-updateMessage();
-
 
 /******************************************************
 ********** Fourth script: Array returning function ****
@@ -108,14 +114,13 @@ function updateSize(){
     return sizes;
   }
 
-//Updating the nodes text content with the returned values
+  //Updating the nodes text content with the returned values
 
   var elArea = document.getElementById('area');
   elArea.textContent = getSize(width, height, depth)[0];
 
   var elVolume = document.getElementById('volume');
   elVolume.textContent = getSize(width, height, depth)[1];
-
 }
 
 /******************************************************
@@ -214,195 +219,227 @@ elConverted.textContent = meter.conversionToF() + meter.convertedUnit;
 
 
 
-
-
 /******************************************************
 ********** Sixth script: Objects Constructor **********
 ******************************************************/
+objectContructor();
 
-//Create the Object Constructor
+function objectContructor() {
+  //Create the Object Constructor
 
-function Hotel(name, rooms, booked) {
-  this.name = name;
-  this.rooms = rooms;
-  this.booked = booked;
-  this.checkAvailability = function() {
-    return this.rooms - this.booked;
-  };
+  function Hotel(name, rooms, booked) {
+    this.name = name;
+    this.rooms = rooms;
+    this.booked = booked;
+    this.checkAvailability = function() {
+      return this.rooms - this.booked;
+    };
+  }
+
+  //Create 2 objects using the Constructor
+
+  var hiltonHotel = new Hotel('Hilton', 135, 79);
+  var toyokoinnHotel = new Hotel('Toyoko-Inn', 57, 45);
+
+
+  // Update the page with the new content
+  var details1 = hiltonHotel.name + ' rooms: ' + hiltonHotel.checkAvailability();
+  var elHotel1 = document.getElementById('item1');
+  elHotel1.textContent = details1;
+
+  var details2 = toyokoinnHotel.name + ' rooms: ' + toyokoinnHotel.checkAvailability();
+  var elHotel2 = document.getElementById('item2');
+  elHotel2.textContent = details2;
+
 }
-
-//Create 2 objects using the Constructor
-
-var hiltonHotel = new Hotel('Hilton', 135, 79);
-var toyokoinnHotel = new Hotel('Toyoko-Inn', 57, 45);
-
-
-// Update the page with the new content
-var details1 = hiltonHotel.name + ' rooms: ' + hiltonHotel.checkAvailability();
-var elHotel1 = document.getElementById('item1');
-elHotel1.textContent = details1;
-
-var details2 = toyokoinnHotel.name + ' rooms: ' + toyokoinnHotel.checkAvailability();
-var elHotel2 = document.getElementById('item2');
-elHotel2.textContent = details2;
-
 
 /******************************************************
 ********** Seventh script: Browser Object Model *******
 ******************************************************/
+windowObject();
 
-var elWindowWidth = document.getElementById('windowWidth');
-elWindowWidth.textContent = window.innerWidth;
+function windowObject() {
+  var elWindowWidth = document.getElementById('windowWidth');
+  elWindowWidth.textContent = window.innerWidth;
 
-var elWindowHeight = document.getElementById('windowHeight');
-elWindowHeight.textContent = window.innerHeight;
+  var elWindowHeight = document.getElementById('windowHeight');
+  elWindowHeight.textContent = window.innerHeight;
 
-var elHistory = document.getElementById('history');
-elHistory.textContent = window.history.length;
+  var elHistory = document.getElementById('history');
+  elHistory.textContent = window.history.length;
 
-var elScreenWidth = document.getElementById('screenWidth');
-elScreenWidth.textContent = window.screen.width;
+  var elScreenWidth = document.getElementById('screenWidth');
+  elScreenWidth.textContent = window.screen.width;
 
-var elScreenHeight = document.getElementById('screenHeight');
-elScreenHeight.textContent = window.screen.height;
+  var elScreenHeight = document.getElementById('screenHeight');
+  elScreenHeight.textContent = window.screen.height;
 
-var elWindowLoc = document.getElementById('address');
-elWindowLoc.textContent = window.location;
-
+  var elWindowLoc = document.getElementById('address');
+  elWindowLoc.textContent = window.location;
+}
 
 /******************************************************
 ********** Eighth script: Document Object Model *******
 ******************************************************/
+documentObject();
 
-var msg = '<p><i>Page title: </i><b>' + document.title + '</b> <br />';
-msg += '<i>Page address: </i><b>' + document.URL + '</b> <br />';
-msg += '<i>Last modified: </i><b>' + document.lastModified + '</b> </p>';
+function documentObject() {
 
-var elPage = document.getElementById('aboutPage');
-elPage.innerHTML = msg;
+  var msg = '<p><i>Page title: </i><b>' + document.title + '</b> <br />';
+  msg += '<i>Page address: </i><b>' + document.URL + '</b> <br />';
+  msg += '<i>Last modified: </i><b>' + document.lastModified + '</b> </p>';
 
+  var elPage = document.getElementById('aboutPage');
+  elPage.innerHTML = msg;
+}
 
 /******************************************************
 ********** Ninth script: Global Objects : String ******
 ******************************************************/
-var saying = 'Sample string test ';
-elSaying = document.getElementById('saying');
-elSaying.textContent = saying;
+stringObject();
 
-var stringMsg = '<tr><td><i>Length: </i><b>' + saying.length + '</b></td></tr>';
-stringMsg += '<tr><td><i>Uppercase: </i><b>' + saying.toUpperCase() + '</b> </td></tr>';
-stringMsg += '<tr><td><i>Lowercase: </i><b>' + saying.toLowerCase() + '</b> </td></tr>';
-stringMsg += '<tr><td><i>5th character: </i><b>' + saying.charAt(4) + '</b> </td></tr>';
-stringMsg += '<tr><td><i>Where is "in": </i><b>' + saying.indexOf('in') + '</b> </td></tr>';
-stringMsg += '<tr><td><i>Where is the last "s": </i><b>' + saying.lastIndexOf('s') + '</b> </td></tr>';
-stringMsg += '<tr><td><i>What are the characters between p and g: </i><b>' + saying.substring(4,12) + '</b> </td></tr>';
-stringMsg += '<tr><td><i>What are the words here : </i><b>' + saying.split(' ') + '</b> </td></tr>';
-stringMsg += '<tr><td><i>Delete the ending space: </i><b>' + saying.trim() + '</b> </td></tr>';
-stringMsg += '<tr><td><i>Replace "string" with "phrase" : </i><b>' + saying.replace('string','phrase') + '</b> </td></tr>';
+function stringObject() {
+  var saying = 'Sample string test ';
+  elSaying = document.getElementById('saying');
+  elSaying.textContent = saying;
 
-elResult = document.getElementById('stringResult');
-elResult.innerHTML = stringMsg;
+  var stringMsg = '<tr><td><i>Length: </i><b>' + saying.length + '</b></td></tr>';
+  stringMsg += '<tr><td><i>Uppercase: </i><b>' + saying.toUpperCase() + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>Lowercase: </i><b>' + saying.toLowerCase() + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>5th character: </i><b>' + saying.charAt(4) + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>Where is "in": </i><b>' + saying.indexOf('in') + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>Where is the last "s": </i><b>' + saying.lastIndexOf('s') + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>What are the characters between p and g: </i><b>' + saying.substring(4,12) + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>What are the words here : </i><b>' + saying.split(' ') + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>Delete the ending space: </i><b>' + saying.trim() + '</b> </td></tr>';
+  stringMsg += '<tr><td><i>Replace "string" with "phrase" : </i><b>' + saying.replace('string','phrase') + '</b> </td></tr>';
 
+  elResult = document.getElementById('stringResult');
+  elResult.innerHTML = stringMsg;
+}
 
 /******************************************************
 ********** Tenth script: Global Objects : Numbers *****
 ******************************************************/
+numbersObjects();
 
-var originalNumber = 10.23456789;
-var pi = Math.PI;
+function numbersObjects() {
 
-var elOriginal = document.getElementById('originalNumber');
-elOriginal.textContent = originalNumber;
+  var originalNumber = 10.23456789;
+  var pi = Math.PI;
 
-var elFixed = document.getElementById('fixedDigits');
-elFixed.textContent = originalNumber.toFixed(3);
+  var elOriginal = document.getElementById('originalNumber');
+  elOriginal.textContent = originalNumber;
 
-var elPrecised = document.getElementById('precisedDigits');
-elPrecised.textContent = originalNumber.toPrecision(3);
+  var elFixed = document.getElementById('fixedDigits');
+  elFixed.textContent = originalNumber.toFixed(3);
 
-var elPi = document.getElementById('pi');
-elPi.textContent = Math.PI;
+  var elPrecised = document.getElementById('precisedDigits');
+  elPrecised.textContent = originalNumber.toPrecision(3);
 
-var elRound = document.getElementById('round');
-elRound.textContent = Math.round(pi);
+  var elPi = document.getElementById('pi');
+  elPi.textContent = Math.PI;
 
-var elSquare = document.getElementById('square');
-elSquare.textContent = Math.sqrt(9);
+  var elRound = document.getElementById('round');
+  elRound.textContent = Math.round(pi);
 
-var elCeil = document.getElementById('ceil');
-elCeil.textContent = Math.ceil(pi);
+  var elSquare = document.getElementById('square');
+  elSquare.textContent = Math.sqrt(9);
 
-var elFloor = document.getElementById('floor');
-elFloor.textContent = Math.floor(pi);
+  var elCeil = document.getElementById('ceil');
+  elCeil.textContent = Math.ceil(pi);
 
-var elRandom = document.getElementById('random');
-elRandom.textContent = Math.random();
+  var elFloor = document.getElementById('floor');
+  elFloor.textContent = Math.floor(pi);
 
-var elInteger1 = document.getElementById('randomInteger1');
-elInteger1.textContent = Math.floor(Math.random() * 10);
+  var elRandom = document.getElementById('random');
+  elRandom.textContent = Math.random();
 
-var elInteger2 = document.getElementById('randomInteger2');
-elInteger2.textContent = '5 ≤ n ≤ 15 ⇒ ' + Math.floor(Math.random() * 11 + 5);
+  var elInteger1 = document.getElementById('randomInteger1');
+  elInteger1.textContent = Math.floor(Math.random() * 10);
 
-var elInteger3 = document.getElementById('randomInteger3');
-elInteger3.textContent = '100 ≤ n ≤ 900 ⇒ ' + Math.floor(Math.random() * 900 + 100);
+  var elInteger2 = document.getElementById('randomInteger2');
+  elInteger2.textContent = '5 ≤ n ≤ 15 ⇒ ' + Math.floor(Math.random() * 11 + 5);
 
+  var elInteger3 = document.getElementById('randomInteger3');
+  elInteger3.textContent = '100 ≤ n ≤ 900 ⇒ ' + Math.floor(Math.random() * 900 + 100);
+}
 
 /******************************************************
 ********** Eleventh script: Global Objects : Date *****
 *******************************************************/
-// Create the today object using date constructor
-var today = new Date();
 
-// Get the day of the week (number from 0 to 6), make an array with all days' name
-// Retrieve the name of today's day using the dayOfTheWeek index in nameOfTheDay array
-var dayOfTheWeek = today.getDay();
-var nameOfTheDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-var dayOfToday = nameOfTheDay[dayOfTheWeek];
+todayClock();
 
-// Get the day of the month
-var day = today.getDate();
+function todayClock() {
 
-// Get the month (number from 0 to 11)
-var month = today.getMonth();
-var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-var monthOfToday = monthNames[month];
+  // Create the today object using date constructor
+  var today = new Date();
 
-// Get the year
-var year = today.getYear();
+  // Get the day of the week (number from 0 to 6), make an array with all days' name
+  // Retrieve the name of today's day using the dayOfTheWeek index in nameOfTheDay array
+  var dayOfTheWeek = today.getDay();
+  var nameOfTheDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var dayOfToday = nameOfTheDay[dayOfTheWeek];
 
-// Get the hour and the minutes
-var hours = today.getHours();
-var minutes = today.getMinutes();
-if (minutes < 10) {
-  minutes = '0' + minutes;
+  // Get the day of the month
+  var day = today.getDate();
+
+  // Get the month (number from 0 to 11)
+  var month = today.getMonth();
+  var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var monthOfToday = monthNames[month];
+
+  // Get the year
+  var year = today.getYear();
+
+  // Get the hour and the minutes
+  var hours = today.getHours();
+  var minutes = today.getMinutes();
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  // Create an array containing messages depending of the hour of the day
+  // Add condition statement to retrieve the right greeting depending of hour value
+  var greeting = ['Hello', 'Good morning!', 'Good afternoon!', 'Good evening!'];
+  var greetingNow = greeting[0];
+
+  if (hours  >= 0 && hours < 12) {
+    greetingNow = greeting[1];
+  } else if (hours >= 12 && hours < 18) {
+    greetingNow = greeting[2];
+  } else if (hours >= 18) {
+    greetingNow = greeting[3];
+  }
+
+  // Create a new date using the constructor and set the date
+  // Create a variable to get the difference between now and this date
+  // (result in ms so need to divide it by the number of ms in a day/month/year...)
+  var freelanceDate = new Date('May 12, 2016 11:00:00');
+  var difference = today.getTime() - freelanceDate.getTime();
+  var differenceDays = (difference / 86400000);
+  var differenceHours = (difference / 3600000);
+
+  //Update the content
+  var elTodayMessage = document.getElementById('timeMessage');
+  elTodayMessage.textContent = greetingNow + ' Today we are ' + dayOfToday + ', ' + monthOfToday + ' ' + day + ', ' + year;
+
+  var elTime = document.getElementById('clockTime');
+  elTime.textContent = hours + ':' + minutes;
+
+  var elWorking = document.getElementById('working');
+  elWorking.textContent = differenceDays.toFixed(0) + ' days ( ' + differenceHours.toFixed(2) + ' hours)';
+
+  setTimeout(todayClock, 1000*60);
 }
 
-// Create an array containing messages depending of the hour of the day
-// Add condition statement to retrieve the right greeting depending of hour value
-var greeting = ['Hello', 'Good morning!', 'Good afternoon!', 'Good evening!'];
-var greetingNow = greeting[0];
+updateTimer();
 
-if (hours  >= 0 && hours < 12) {
-  greetingNow = greeting[1];
-} else if (hours >= 12 && hours < 18) {
-  greetingNow = greeting[2];
-} else if (hours >= 18) {
-  greetingNow = greeting[3];
-}
-
-// Create a new date using the constructor and set the date
-// Create a variable to get the difference between now and this date
-// (result in ms so need to divide it by the number of ms in a day/month/year...)
-var freelanceDate = new Date('May 12, 2016 11:00:00');
-var difference = today.getTime() - freelanceDate.getTime();
-var differenceDays = (difference / 86400000);
-var differenceHours = (difference / 3600000);
-
-//
 function updateTimer() {
+  var now = new Date();
   var endOfTime = new Date('January 1, 2017 00:00:00');
-  var diffUntilTheEnd = endOfTime.getTime() - today.getTime();
+  var diffUntilTheEnd = endOfTime.getTime() - now.getTime();
 
     //Get hours from milliseconds
     var diffHours = diffUntilTheEnd / (1000*60*60);
@@ -423,16 +460,5 @@ function updateTimer() {
     var elTimer = document.getElementById('timer');
     elTimer.textContent = diffH + ':' + diffM +':' + diffS;
 
-    setTimeout(updateTimer,1000);
+    setTimeout(updateTimer, 1000);
 }
-updateTimer();
-
-//Update the content
-var elTodayMessage = document.getElementById('timeMessage');
-elTodayMessage.textContent = greetingNow + ' Today we are ' + dayOfToday + ', ' + monthOfToday + ' ' + day + ', ' + year;
-
-var elTime = document.getElementById('clockTime');
-elTime.textContent = hours + ':' + minutes;
-
-var elWorking = document.getElementById('working');
-elWorking.textContent = differenceDays.toFixed(0) + ' days ( ' + differenceHours.toFixed(2) + ' hours)';
