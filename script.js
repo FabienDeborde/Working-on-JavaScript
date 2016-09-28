@@ -346,3 +346,93 @@ elInteger2.textContent = '5 ≤ n ≤ 15 ⇒ ' + Math.floor(Math.random() * 11 +
 
 var elInteger3 = document.getElementById('randomInteger3');
 elInteger3.textContent = '100 ≤ n ≤ 900 ⇒ ' + Math.floor(Math.random() * 900 + 100);
+
+
+/******************************************************
+********** Eleventh script: Global Objects : Date *****
+*******************************************************/
+// Create the today object using date constructor
+var today = new Date();
+
+// Get the day of the week (number from 0 to 6), make an array with all days' name
+// Retrieve the name of today's day using the dayOfTheWeek index in nameOfTheDay array
+var dayOfTheWeek = today.getDay();
+var nameOfTheDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var dayOfToday = nameOfTheDay[dayOfTheWeek];
+
+// Get the day of the month
+var day = today.getDate();
+
+// Get the month (number from 0 to 11)
+var month = today.getMonth();
+var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var monthOfToday = monthNames[month];
+
+// Get the year
+var year = today.getYear();
+
+// Get the hour and the minutes
+var hours = today.getHours();
+var minutes = today.getMinutes();
+if (minutes < 10) {
+  minutes = '0' + minutes;
+}
+
+// Create an array containing messages depending of the hour of the day
+// Add condition statement to retrieve the right greeting depending of hour value
+var greeting = ['Hello', 'Good morning!', 'Good afternoon!', 'Good evening!'];
+var greetingNow = greeting[0];
+
+if (hours  >= 0 && hours < 12) {
+  greetingNow = greeting[1];
+} else if (hours >= 12 && hours < 18) {
+  greetingNow = greeting[2];
+} else if (hours >= 18) {
+  greetingNow = greeting[3];
+}
+
+// Create a new date using the constructor and set the date
+// Create a variable to get the difference between now and this date
+// (result in ms so need to divide it by the number of ms in a day/month/year...)
+var freelanceDate = new Date('May 12, 2016 11:00:00');
+var difference = today.getTime() - freelanceDate.getTime();
+var differenceDays = (difference / 86400000);
+var differenceHours = (difference / 3600000);
+
+//
+function updateTimer() {
+  var endOfTime = new Date('January 1, 2017 00:00:00');
+  var diffUntilTheEnd = endOfTime.getTime() - today.getTime();
+
+    //Get hours from milliseconds
+    var diffHours = diffUntilTheEnd / (1000*60*60);
+    var absoluteHours = Math.floor(diffHours);
+    var diffH = absoluteHours > 9 ? absoluteHours : '0' + absoluteHours
+
+    //Get remainder from hours and convert to minutes
+    var diffMinutes = (diffHours - absoluteHours) * 60;
+    var absoluteMinutes = Math.floor(diffMinutes);
+    var diffM = absoluteMinutes > 9 ? absoluteMinutes : '0' +  absoluteMinutes;
+
+    //Get remainder from minutes and convert to seconds
+    var diffSeconds = (diffMinutes - absoluteMinutes) * 60;
+    var absoluteSeconds = Math.floor(diffSeconds);
+    var diffS = absoluteSeconds > 9 ? absoluteSeconds : '0' + absoluteSeconds;
+
+    // Update the node content
+    var elTimer = document.getElementById('timer');
+    elTimer.textContent = diffH + ':' + diffM +':' + diffS;
+
+    setTimeout(updateTimer,1000);
+}
+updateTimer();
+
+//Update the content
+var elTodayMessage = document.getElementById('timeMessage');
+elTodayMessage.textContent = greetingNow + ' Today we are ' + dayOfToday + ', ' + monthOfToday + ' ' + day + ', ' + year;
+
+var elTime = document.getElementById('clockTime');
+elTime.textContent = hours + ':' + minutes;
+
+var elWorking = document.getElementById('working');
+elWorking.textContent = differenceDays.toFixed(0) + ' days ( ' + differenceHours.toFixed(2) + ' hours)';
