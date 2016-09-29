@@ -7,7 +7,6 @@ I used [*Jade*](https://pugjs.org) (now pug) and [*Sass*](http://sass-lang.com/)
 I'll update this as I progress through the book.
 
 As of now, I finished the basic part which you can check on [https://fabiendeborde.github.io/Working-on-JavaScript/Base/](https://fabiendeborde.github.io/Working-on-JavaScript/Base/).
-
 I made *12 scripts*:
   1. A price updater based on user input
   2. A simple order check table
