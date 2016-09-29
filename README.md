@@ -12,7 +12,7 @@ As of now, I finished the basic part and made *12 scripts* :
   3. A really simple message updater function
   4. A size calculator
   5. A temperature converter with + and - buttons, background changes based on temperature (*contains also a kilometers/miles object which is not finished*)
-  6. A really simple content updater using **constructor**
+  6. A really simple content updater using **constructors**
   7. A script using the **Window object** to get some infos
   8. A script using the **Document object** to get some infos
   9. A script using the **String global object** to manipulate some text
