@@ -465,5 +465,25 @@ function updateTimer() {
 
 
 /******************************************************
-********** Eleventh script: Global Objects : Date *****
+********** Twelfth script:  *****
 *******************************************************/
+myTable();
+
+function myTable() {
+  var names = ['Paul', 'Bob', 'Jack', 'Peter', 'John'];
+  var age = [33, 40, 25, 37, 50];
+
+  var namesLength = names.length;
+  ageLength = age.length;
+
+  elTable = document.getElementById('myTable');
+  msg = '<thead class="thead-inverse"><tr> <th>Name</th> <th>Age</th> </tr></thead>';
+
+  for (var i = 0; i < names.length; i += 1) {
+    console.log(i);
+    msg += '<tr> <td>' + names[i] + '</td>' + '<td>' + age[i] + '</td></tr>';
+  }
+
+elTable.innerHTML = msg;
+
+}

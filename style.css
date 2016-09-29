@@ -336,3 +336,17 @@ body .eleventhScript .timer #timer {
   color: red;
   font-family: 'ds-digital';
 }
+
+body .twelfthScript table {
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+}
+
+body .twelfthScript table tr:hover {
+  background-color: lightSteelBlue;
+}
+
+body .twelfthScript table th {
+  text-align: center;
+}
