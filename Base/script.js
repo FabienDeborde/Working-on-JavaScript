@@ -390,7 +390,7 @@ function todayClock() {
   var monthOfToday = monthNames[month];
 
   // Get the year
-  var year = today.getYear();
+  var year = today.getFullYear();
 
   // Get the hour and the minutes
   var hours = today.getHours();
@@ -480,7 +480,6 @@ function myTable() {
   msg = '<thead class="thead-inverse"><tr> <th>Name</th> <th>Age</th> </tr></thead>';
 
   for (var i = 0; i < names.length; i += 1) {
-    console.log(i);
     msg += '<tr> <td>' + names[i] + '</td>' + '<td>' + age[i] + '</td></tr>';
   }
 
