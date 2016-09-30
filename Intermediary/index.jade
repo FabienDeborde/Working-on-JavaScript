@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.min.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css", integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj", crossorigin="anonymous")
+  link(rel="stylesheet", href="style.css")
+  title Javascript intermediary scripts
+  
+body
+  
+  .container#page
+    h1 Nodes selector & DOM manipulation
+    .card
+      .card-header
+        h1#header List
+        h2 Buy groceries
+      ul#myUL
+        li#one.hoverable.hot
+          em fresh
+          span  figs
+        li#two.hoverable.hot pine nuts
+        li#three.hoverable.hot honey
+        li#four.hoverable balsamic vinegar
+    .buttons
+      button.btn.btn-sm.btn-primary(onclick="getId()") getElementById
+      button.btn.btn-sm.btn-primary(onclick="querySel()") querySelector
+      button.btn.btn-sm.btn-primary(onclick="getClass()") getElementsByClassName
+      button.btn.btn-sm.btn-primary(onclick="getTag()") getElementsByTagName
+      button.btn.btn-sm.btn-primary(onclick="queryAll()") querySelectorAll
+      button.btn.btn-sm.btn-primary(onclick="travDom()") Traverse the DOM
+      button.btn.btn-sm.btn-primary(onclick="addItem()") Add new node to the DOM
+      button.btn.btn-sm.btn-primary(onclick="deleteItem()") Delete node from the DOM
+      button.btn.btn-sm.btn-primary(onclick="attr()") Change attributes
+
+
+
+
+
+
+
+script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js", integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU", crossorigin="anonymous")
+script(src="script.js")

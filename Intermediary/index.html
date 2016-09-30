@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Javascript intermediary scripts</title>
+</head>
+<body>
+  <div id="page" class="container">
+    <h1>Nodes selector & DOM manipulation</h1>
+    <div class="card">
+      <div class="card-header">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2>
+      </div>
+      <ul id="myUL">
+        <li id="one" class="hoverable hot"><em>fresh</em><span> figs</span></li>
+        <li id="two" class="hoverable hot">pine nuts</li>
+        <li id="three" class="hoverable hot">honey</li>
+        <li id="four" class="hoverable">balsamic vinegar</li>
+      </ul>
+    </div>
+    <div class="buttons">
+      <button onclick="getId()" class="btn btn-sm btn-primary">getElementById</button>
+      <button onclick="querySel()" class="btn btn-sm btn-primary">querySelector</button>
+      <button onclick="getClass()" class="btn btn-sm btn-primary">getElementsByClassName</button>
+      <button onclick="getTag()" class="btn btn-sm btn-primary">getElementsByTagName</button>
+      <button onclick="queryAll()" class="btn btn-sm btn-primary">querySelectorAll</button>
+      <button onclick="travDom()" class="btn btn-sm btn-primary">Traverse the DOM</button>
+      <button onclick="addItem()" class="btn btn-sm btn-primary">Add new node to the DOM</button>
+      <button onclick="deleteItem()" class="btn btn-sm btn-primary">Delete node from the DOM</button>
+      <button onclick="attr()" class="btn btn-sm btn-primary">Change attributes</button>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+<script src="script.js"></script>
