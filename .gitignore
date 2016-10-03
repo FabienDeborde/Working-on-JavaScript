@@ -39,3 +39,7 @@ Thumbs.db
 # Prepros config file #
 #######################
 prepros.cfg
+
+# Misc #
+#######################
+.tern-project

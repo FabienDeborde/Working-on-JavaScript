@@ -1,3 +1,11 @@
+  /////////////////////////////////////////
+ ///////// Intermediary Scripts //////////
+/////////////////////////////////////////
+
+/****************************************
+********** Targeting Scripts ***********
+****************************************/
+
 // Target a single element
 
 //getElementById
@@ -54,7 +62,9 @@ function queryAll(){
   }
 }
 
-// Traversing the DOM
+/****************************************
+********** Traversing the DOM Scripts ***
+****************************************/
 
 function travDom() {
   var myEl = document.getElementById('one');
@@ -66,7 +76,9 @@ function travDom() {
   parent.className = ('font');
 }
 
-// DOM manipulation
+/****************************************
+********** DOM manipulation *************
+****************************************/
 
 function addItem() {
   // Variable to store parent location
@@ -92,7 +104,9 @@ function deleteItem() {
   containerEl.removeChild(deleteEl);
 }
 
-// Attributes
+/****************************************
+************** Attributes ***************
+****************************************/
 
 function attr() {
   var firstItem = document.getElementById('one');
@@ -104,3 +118,20 @@ function attr() {
   var secondItem = document.getElementById('two');
   secondItem.removeAttribute('class');
 }
+
+
+/****************************************
+************** Events *******************
+****************************************/
+
+function checkUsername (){
+  var elMsg = document.getElementById('message');
+  if (this.value.length < 5) {
+    elMsg.textContent = '* Username must be 5 characters or more *';
+  }else {
+    elMsg.textContent = '';
+  }
+}
+
+var elUsername = document.getElementById('username');
+elUsername.addEventListener('blur',checkUsername,false);

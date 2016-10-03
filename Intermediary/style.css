@@ -12,7 +12,12 @@ h1 {
   text-transform: uppercase;
 }
 
-.card {
+hr {
+  width: 75%;
+  margin: 50px auto 30px auto;
+}
+
+#page .card {
   width: 500px;
   margin: auto;
   margin-top: 50px;
@@ -22,11 +27,11 @@ h1 {
   background-color: #969696;
 }
 
-.card h1 {
+#page .card h1 {
   color: white;
 }
 
-.card .card-header {
+#page .card .card-header {
   padding: 30px 0;
   background-color: #2c3e50;
   text-align: center;
@@ -34,15 +39,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.card .card-header h1 {
+#page .card .card-header h1 {
   margin-bottom: 30px;
 }
 
-.font {
+#page .font {
   font-family: 'ubuntu';
 }
 
-ul {
+#page ul {
   padding: 0;
   margin: 0;
   font-family: monospace;
@@ -50,22 +55,22 @@ ul {
   list-style: none;
 }
 
-ul li {
+#page ul li {
   padding: 20px 20px;
   background-color: #f39c12;
   position: relative;
   border: 1px solid rgba(44, 62, 80, 0.4);
 }
 
-ul .hot {
+#page ul .hot {
   background-color: #e74c3c;
 }
 
-ul .fresh {
+#page ul .fresh {
   background-color: #16a085 !important;
 }
 
-ul .hoverable:before {
+#page ul .hoverable:before {
   display: block;
   content: '';
   position: absolute;
@@ -76,12 +81,12 @@ ul .hoverable:before {
   left: 0;
 }
 
-ul .hoverable:hover:before {
+#page ul .hoverable:hover:before {
   z-index: 1;
   background-color: rgba(44, 62, 80, 0.1);
 }
 
-.buttons {
+#page .buttons {
   background-color: #ecf0f1;
   width: 500px;
   height: auto;
@@ -89,7 +94,28 @@ ul .hoverable:hover:before {
   margin-top: 20px;
 }
 
-.buttons .btn {
+#page .buttons .btn {
   padding: 5px 10px;
   margin: 10px 10px 0 0;
+}
+
+#events .row {
+  margin: auto;
+  margin-top: 30px;
+}
+
+#events .row #message {
+  color: #c0392b;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#events input {
+  display: block;
+  margin: auto;
+  width: 400px;
+  padding: 15px 25px;
+  font-size: 1.6em;
+  color: slategrayw;
 }
