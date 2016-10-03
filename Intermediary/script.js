@@ -124,8 +124,24 @@ function attr() {
 ************** Events *******************
 ****************************************/
 
+// Event handlers
+
+function checkEmail() {
+  var elMsg = document.getElementById('messageEmail');
+  if (this.value.indexOf('@') < 0) { // Return -1 if the character is not found
+    elMsg.textContent = '* Please enter a valid email adress *';
+  }else{
+    elMsg.textContent = '';
+  }
+}
+
+var elEmail = document.getElementById('email');
+elEmail.addEventListener('blur', checkEmail, false);
+
+// Event listeners
+
 function checkUsername (){
-  var elMsg = document.getElementById('message');
+  var elMsg = document.getElementById('messageUsername');
   if (this.value.length < 5) {
     elMsg.textContent = '* Username must be 5 characters or more *';
   }else {
@@ -135,3 +151,55 @@ function checkUsername (){
 
 var elUsername = document.getElementById('username');
 elUsername.addEventListener('blur',checkUsername,false);
+
+// Parameters with event handlers/listeners
+// with IE 8 and older support
+
+function checkPassword(minLength) {
+  var elMsg = document.getElementById('messagePassword');
+  if (elPassword.value.length < minLength) { // can't use this here, must refer to the element
+    elMsg.textContent = 'Password must be ' + minLength + ' characters or more';
+  } else {
+    elMsg = '';
+  }
+}
+
+var elPassword = document.getElementById('password');
+
+if (elPassword.addEventListener) {
+  elPassword.addEventListener('blur', function(){
+    checkPassword(6);
+  }, false);
+} else {
+  elPassword.attachEvent('onblur', function(){
+    checkPassword(6);
+  });
+}
+
+// Event Object (with IE8 and older support)
+
+function checkLength(e, minLength) {
+  var el, elMsg;
+  if(!e) {                // If event object doesn't exist
+    e = window.event;     // Use IE fallback
+  }
+  el = e.target || e.srcElement;  // Get target of event
+  elMsg = el.previousElementSibling;          // Get its previous sibling's first child
+
+  if (el.value.length < minLength) {
+    elMsg.textContent = 'Your comment must be ' + minLength + ' characters or more';
+  } else {
+    elMsg.textContent = '';
+  }
+}
+
+var elComment = document.getElementById('comment');
+if (elComment.addEventListener) {
+  elComment.addEventListener('blur', function (e) {
+    checkLength(e, 20);
+  }, false);
+} else {
+  elComment.attachEvent('onblur', function(e){
+    checkLength(e, 20);
+  });
+}

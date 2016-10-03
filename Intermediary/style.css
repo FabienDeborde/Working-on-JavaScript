@@ -104,18 +104,18 @@ hr {
   margin-top: 30px;
 }
 
-#events .row #message {
+#events .row > * {
   color: #c0392b;
   font-style: italic;
   text-align: center;
   margin-bottom: 30px;
 }
 
-#events input {
+#events input, #events textarea {
   display: block;
   margin: auto;
   width: 400px;
   padding: 15px 25px;
   font-size: 1.6em;
-  color: slategrayw;
+  color: slategray;
 }
