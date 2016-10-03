@@ -6,6 +6,7 @@ head
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.min.css")
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css", integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj", crossorigin="anonymous")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css")
   link(rel="stylesheet", href="style.css")
   title Javascript intermediary scripts
   
@@ -43,26 +44,42 @@ body
     .row
       #messageEmail
       
-      input#email(type='email', placeholder='Enter an email adress')
+    input#email(type='email', placeholder='Enter an email adress')
     
     .row
       #messageUsername
     
-      input#username(type='text', placeholder='Enter a username')
+    input#username(type='text', placeholder='Enter a username')
     
     .row
       #messagePassword
       
-      input#password(type='password', placeholder='Enter a password')
+    input#password(type='password', placeholder='Enter a password')
     
     .row
       
       #messageText
       
-      textarea#comment(placeholder='Enter a comment here...')
+    textarea#comment(placeholder='Enter a comment here...')
 
-      
-      
+  .container#delegation
+    h2 Event delegation
+    
+    ul.list-group#todo
+      li.list-group-item.list-group-item-info To-do
+      li.list-group-item.list-group-item-action Study
+        a(href="#").octicon.octicon-trashcan.pull-xs-right
+        
+      li.list-group-item.list-group-item-action Go to the gym
+        a(href="#").octicon.octicon-trashcan.pull-xs-right
+        
+      li.list-group-item.list-group-item-action Go to the fishing store
+        a(href="#").octicon.octicon-trashcan.pull-xs-right
+        
+      li.list-group-item.list-group-item-action Buy groceries
+        a(href="#").octicon.octicon-trashcan.pull-xs-right
+
+
   hr
 
 

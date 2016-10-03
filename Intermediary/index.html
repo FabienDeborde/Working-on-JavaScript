@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/css/tether.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css"/>
   <link rel="stylesheet" href="style.css"/>
   <title>Javascript intermediary scripts</title>
 </head>
@@ -41,20 +42,30 @@
     <h1>Events</h1>
     <div class="row">
       <div id="messageEmail"></div>
-      <input id="email" type="email" placeholder="Enter an email adress"/>
     </div>
+    <input id="email" type="email" placeholder="Enter an email adress"/>
     <div class="row">
       <div id="messageUsername"></div>
-      <input id="username" type="text" placeholder="Enter a username"/>
     </div>
+    <input id="username" type="text" placeholder="Enter a username"/>
     <div class="row">
       <div id="messagePassword"></div>
-      <input id="password" type="password" placeholder="Enter a password"/>
     </div>
+    <input id="password" type="password" placeholder="Enter a password"/>
     <div class="row">
       <div id="messageText"></div>
-      <textarea id="comment" placeholder="Enter a comment here..."></textarea>
     </div>
+    <textarea id="comment" placeholder="Enter a comment here..."></textarea>
+  </div>
+  <div id="delegation" class="container">
+    <h2>Event delegation</h2>
+    <ul id="todo" class="list-group">
+      <li class="list-group-item list-group-item-info">To-do</li>
+      <li class="list-group-item list-group-item-action">Study<a href="#" class="octicon octicon-trashcan pull-xs-right"></a></li>
+      <li class="list-group-item list-group-item-action">Go to the gym<a href="#" class="octicon octicon-trashcan pull-xs-right"></a></li>
+      <li class="list-group-item list-group-item-action">Go to the fishing store<a href="#" class="octicon octicon-trashcan pull-xs-right"></a></li>
+      <li class="list-group-item list-group-item-action">Buy groceries<a href="#" class="octicon octicon-trashcan pull-xs-right"></a></li>
+    </ul>
   </div>
   <hr/>
 </body>

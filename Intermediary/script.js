@@ -184,7 +184,7 @@ function checkLength(e, minLength) {
     e = window.event;     // Use IE fallback
   }
   el = e.target || e.srcElement;  // Get target of event
-  elMsg = el.previousElementSibling;          // Get its previous sibling's first child
+  elMsg = el.previousElementSibling.childNodes[1];    // Get its previous sibling's first child ([0] point to the div.row text node)
 
   if (el.value.length < minLength) {
     elMsg.textContent = 'Your comment must be ' + minLength + ' characters or more';
@@ -201,5 +201,44 @@ if (elComment.addEventListener) {
 } else {
   elComment.attachEvent('onblur', function(e){
     checkLength(e, 20);
+  });
+}
+
+// Event delegation with IE8 and older support
+
+  // Workaround if using old IE and there is no event object
+function getTarget(e){
+  if(!e){
+    e = window.event;
+  }
+  return e.target || e.srcElement;
+}
+
+  // Function to remove item
+
+function removeItem(e){
+  var target = getTarget(e);
+  var elParent = target.parentNode;
+  var elGrandparent = elParent.parentNode;
+  elGrandparent.removeChild(elParent);
+
+  // Prevent the link default behaviour
+  if (e.preventDefault) {
+    e.preventDefault();
+  } else {
+    e.returnValue = false;
+  }
+}
+
+  // Set up the event listeners to call the function on click
+
+var el = document.getElementById('todo');
+if (el.addEventListener) {
+  el.addEventListener('click', function (e){
+    removeItem(e);
+  }, false);
+} else {
+  el.attachEvent('onclick', function(e) {
+    removeItem(e);
   });
 }

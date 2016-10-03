@@ -2,7 +2,7 @@ body {
   background-color: #ecf0f1;
 }
 
-h1 {
+h1, h2 {
   margin: auto;
   margin-top: 30px;
   text-align: center;
@@ -99,6 +99,10 @@ hr {
   margin: 10px 10px 0 0;
 }
 
+#events h2 {
+  margin-top: 50px;
+}
+
 #events .row {
   margin: auto;
   margin-top: 30px;
@@ -118,4 +122,23 @@ hr {
   padding: 15px 25px;
   font-size: 1.6em;
   color: slategray;
+}
+
+#delegation ul {
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#delegation ul .list-group-item-info {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+#delegation ul a {
+  color: black;
+}
+
+#delegation ul a:hover {
+  color: #c0392b;
 }
