@@ -242,3 +242,90 @@ if (el.addEventListener) {
     removeItem(e);
   });
 }
+
+// Load event
+
+function formFocus() {
+  var formInput = document.getElementById('email');
+  formInput.focus();
+}
+
+window.addEventListener('load', formFocus, false);
+
+// Focus and Blur events
+
+function checkText(){
+  var text = elInput.value;
+  if (text.length < 10) {
+    elInputMsg.className = 'warning';
+    elInputMsg.textContent = 'Too short...';
+  } else {
+    elInputMsg.textContent = '';
+  }
+}
+
+function tipText() {
+  elInputMsg.className = 'tip';
+  elInputMsg.textContent = 'You must enter a text of 10 characters or more';
+}
+
+var elInput = document.getElementById('randomInput');
+var elInputMsg = document.getElementById('msg');
+
+elInput.addEventListener('focus', tipText, false);
+elInput.addEventListener('blur', checkText, false);
+
+// Mouse Events
+clickEvent();
+
+function clickEvent() {
+   // Create the HTML for the message
+  var randomMsg = '<div class=\"myModal\"><span id=\"close\" href=\"#\">close X</span></div>';
+  randomMsg += '<div><h2>Only for subscribers</h2></div>';
+  randomMsg += 'This content is only accessible for our subscribers';
+  randomMsg += 'Subscribe here, and get access to all our content right now!';
+
+  var elNote = document.createElement('div');
+  elNote.setAttribute('id', 'note');
+  elNote.innerHTML = randomMsg;
+  elMouse = document.getElementById('mouse');
+  elMouse.appendChild(elNote);
+
+  function dismissNote() {
+    elMouse.removeChild(elNote);
+  }
+
+  var elClose = document.getElementById('close');
+  elClose.addEventListener('click', dismissNote, false);
+}
+
+// Get the position
+
+position();
+
+function position() {
+
+  // Define all the variables
+  var sx = document.getElementById('sx');
+  var sy = document.getElementById('sy');
+  var px = document.getElementById('px');
+  var py = document.getElementById('py');
+  var cx = document.getElementById('cx');
+  var cy = document.getElementById('cy');
+
+  // Define my function
+  function showPosition(event) {
+    sx.textContent = event.screenX;
+    sy.textContent = event.screenY;
+    px.textContent = event.pageX;
+    py.textContent = event.pageY;
+    cx.textContent = event.clientX;
+    cy.textContent = event.clientY;
+  }
+
+  // Add the event listeners
+  var el = document.getElementById('body');
+  el.addEventListener('mousemove',showPosition, false);
+
+
+}

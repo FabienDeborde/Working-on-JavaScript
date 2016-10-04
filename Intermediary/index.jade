@@ -10,7 +10,7 @@ head
   link(rel="stylesheet", href="style.css")
   title Javascript intermediary scripts
   
-body
+body#body
   
   .container#page
     h1 Nodes selector & DOM manipulation
@@ -79,11 +79,41 @@ body
       li.list-group-item.list-group-item-action Buy groceries
         a(href="#").octicon.octicon-trashcan.pull-xs-right
 
-
   hr
-
-
-
+  .container#focus
+    h2 Focus & Blur events
+    
+    .row
+    
+      #msg
+      
+    input#randomInput(placeholder="Enter some text...")
+    
+  hr
+  .container#mouse
+    h2 Mouse events
+    .contentExample
+      h4 Some random content
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+  hr
+  
+  .navbar.navbar-dark.bg-inverse.navbar-fixed-top#position
+    .nav.navbar-nav#myBar
+      span screenX: 
+      .value#sx
+      span screenY:
+      .value#sy 
+      span.separator || 
+      span pageX: 
+      .value#px
+      span pageY: 
+      .value#py
+      span.separator || 
+      span clientX: 
+      .value#cx
+      span clientY: 
+      .value#cy 
 
 script(src="https://code.jquery.com/jquery-3.1.0.min.js", integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin="anonymous")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js")

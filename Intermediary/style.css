@@ -142,3 +142,111 @@ hr {
 #delegation ul a:hover {
   color: #c0392b;
 }
+
+#focus h2 {
+  margin-top: 50px;
+}
+
+#focus .row {
+  margin: auto;
+  margin-top: 30px;
+}
+
+#focus .row > * {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#focus input, #focus textarea {
+  display: block;
+  margin: auto;
+  width: 400px;
+  padding: 15px 25px;
+  font-size: 1.6em;
+  color: slategray;
+}
+
+#focus .tip {
+  color: #2980b9;
+}
+
+#focus .warning {
+  color: #c0392b;
+}
+
+#mouse {
+  position: relative;
+}
+
+#mouse .contentExample {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 750px;
+  text-align: center;
+}
+
+#note,
+#note h2,
+#note .myModal span {
+  color: #f39c12;
+  text-align: center;
+}
+
+#note {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 3px;
+}
+
+#note h2 {
+  margin-bottom: 30px;
+}
+
+#note .myModal {
+  text-align: right;
+}
+
+#note .myModal span {
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+#note .myModal span:hover {
+  background-color: #f39c12;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#position .nav.navbar-nav#myBar {
+  width: 1200px;
+  height: 45px;
+  margin: auto;
+}
+
+#position .nav.navbar-nav#myBar span {
+  margin: 0 10px;
+}
+
+#position .nav.navbar-nav#myBar .value {
+  color: black;
+  padding: 5px 8px;
+  display: inline-block;
+  background-color: white !important;
+  width: 70px;
+  height: 30px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#position .nav.navbar-nav#myBar span.separator {
+  font-size: 1.5em;
+  margin: 0 25px 0 25px;
+}
