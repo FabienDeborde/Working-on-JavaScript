@@ -327,5 +327,31 @@ function position() {
   var el = document.getElementById('body');
   el.addEventListener('mousemove',showPosition, false);
 
+}
+// Playing with colors
+colors();
 
+function colors(){
+
+  function changeColors(event) {
+
+    var locX =  event.clientX;
+    var locY = event.clientY;
+
+    var red = 128;
+    var green = (3.927533782e-6 * (locX*locX) + 5.059437429e-1 * locX - 201.4786806).toFixed(0);
+    var blue = (4.533947935e-6 * (locY*locY) + 6.329905165e-1 * locY - 301.0561741).toFixed(0);
+    var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+    el.style.backgroundColor = rgb;
+    elMsgColor = document.getElementById('myColor');
+
+    
+
+    console.log('x: ' + green);
+    console.log('y: ' + blue);
+  }
+
+  var el = document.getElementById('myCanvas');
+  el.addEventListener('mousemove', changeColors, false);
 }
