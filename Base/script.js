@@ -140,7 +140,7 @@ var meter = {
   colorB: 219,
   add: 1,
   substract: 1,
-  // Converting the Celcius value to Fahrenheit and rounding it to 1 decimal
+  // Converting the Celsius value to Fahrenheit and rounding it to 1 decimal
   conversionToF: function(){
     return Math.round((this.value*1.8+32) * 10) / 10;
   },
