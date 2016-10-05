@@ -13,8 +13,13 @@ h1, h2
 hr
   width: 75%
   margin: 50px auto 30px auto
-
+#scroll
+  position: fixed
+  top: 75px
+  right: 20px
+  font-size: 1.4em
 #page
+  margin-top: 90px
   .card
     width: 500px
     margin: auto
@@ -205,20 +210,96 @@ hr
       margin: 0 25px 0 25px
 
 #colors
-  #myCanvas
+  #myCanvasContainer
     margin: auto
     margin-top: 30px
     width: 500px
     height: 400px
-    background-color: white
-    border: 1px solid #2c3e50
-    position: relative
 
-    #myColor
-      text-align: center
-      height: 50px
-      font-size: 2em
-      font-weight: bold
+    #myCanvas
+      height: 100%
+      width: 100%
+      background-color: white
+      border: 1px solid #2c3e50
+      position: relative
+
+      #myColor
+        text-align: center
+        height: 50px
+        font-size: 2em
+        font-weight: bold
+        margin: auto
+        margin-top: 175px
+        color: white
+
+#keyboard
+  h2
+    margin-top: 50px
+
+  textarea
+    display: block
+    margin: auto
+    margin-top: 30px
+    width: 500px
+    height: 200px
+    padding: 15px 25px
+    font-size: 1.6em
+    color: slategray
+
+  .row
+    margin: auto
+    margin-top: 30px
+
+    & > *
+      color: #2980b9
+      font-style: italic
+      width: 500px
       margin: auto
-      margin-top: 175px
-      color: white
+      margin-bottom: 30px
+      font-size: 1.4em
+
+#forms
+  h4
+    margin-top: 30px
+    text-align: center
+    color: #d35400
+    font-style: italic
+  #myForm
+    margin: auto
+    margin-top: 30px
+    width: 1200px
+
+    .form-group
+      margin: 0 20px 0 20px
+    .form-check-input
+      margin: 0 10px 0 0
+
+    button
+      margin-left: 20px
+    a
+      color: #d35400
+    input, select
+      &:focus,
+        border: 1px solid #d35400
+    #confirmMsg
+      text-align: center
+      margin-top: -20px
+      &.green
+        color: #16a085
+      &.purple
+        color: #9b59b6
+      &.blue
+        color: #2980b9
+    .form-group, .form-check
+      height: 64px
+      vertical-align: middle
+      line-height: 64px
+  #errorMsg
+    width: 900px
+    margin: auto
+    margin-top: 30px
+    padding: 0px 20px
+    color: #e74c3c
+    font-size: 1.4em
+    text-align: center
+    font-style: italic

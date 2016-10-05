@@ -11,6 +11,7 @@
   <title>Javascript intermediary scripts</title>
 </head>
 <body id="body">
+  <button id="scroll" onclick="bottomPage()" class="btn btn-secondary">↓</button>
   <div id="page" class="container">
     <h1>Nodes selector & DOM manipulation</h1>
     <div class="card">
@@ -96,14 +97,54 @@
   </div>
   <div id="colors" class="container">
     <h2>Playing with colors</h2>
-    <div id="myCanvas"> 
-      <div id="myColor">test</div>
+    <div id="myCanvasContainer"> 
+      <div id="myCanvas"> 
+        <div id="myColor"> </div>
+      </div>
     </div>
   </div>
   <hr/>
-  <div class="container">
-    <h2>Next script</h2>
+  <div id="keyboard" class="container">
+    <h2>Keyboard Events</h2>
+    <textarea id="userInput" placeholder="Enter your text here... (100 char min)"></textarea>
+    <div class="row">
+      <div id="charactersLeft"> </div>
+      <div id="lastKey"> </div>
+    </div>
   </div>
+  <hr/>
+  <div id="forms" class="container">
+    <h2>Form Events</h2>
+    <h4>Subscribe to our newsletter!</h4>
+    <form id="myForm" class="form-inline">
+      <div class="form-group">
+        <label for="emailExample" class="sr-only">Email</label>
+        <input id="emailExample" type="email" placeholder="Enter your email" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="passwordExample" class="sr-only">Password</label>
+        <input id="passwordExample" type="password" placeholder="Enter a password" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="dropdownExample" class="sr-only">Choose a frequency</label>
+        <select id="dropdownExample" class="form-control">
+          <option>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Yearly</option>
+        </select>
+        <div id="confirmMsg"> </div>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label"> 
+          <input id="check" type="checkbox" class="form-check-input"/><span>Agree to <a href="#">our Terms of Service</a></span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-warning">Send</button>
+    </form>
+    <div id="errorMsg"> </div>
+  </div>
+  <hr/>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>

@@ -17,6 +17,17 @@ hr {
   margin: 50px auto 30px auto;
 }
 
+#scroll {
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  font-size: 1.4em;
+}
+
+#page {
+  margin-top: 90px;
+}
+
 #page .card {
   width: 500px;
   margin: auto;
@@ -251,17 +262,22 @@ hr {
   margin: 0 25px 0 25px;
 }
 
-#colors #myCanvas {
+#colors #myCanvasContainer {
   margin: auto;
   margin-top: 30px;
   width: 500px;
   height: 400px;
+}
+
+#colors #myCanvasContainer #myCanvas {
+  height: 100%;
+  width: 100%;
   background-color: white;
   border: 1px solid #2c3e50;
   position: relative;
 }
 
-#colors #myCanvas #myColor {
+#colors #myCanvasContainer #myCanvas #myColor {
   text-align: center;
   height: 50px;
   font-size: 2em;
@@ -269,4 +285,100 @@ hr {
   margin: auto;
   margin-top: 175px;
   color: white;
+}
+
+#keyboard h2 {
+  margin-top: 50px;
+}
+
+#keyboard textarea {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 500px;
+  height: 200px;
+  padding: 15px 25px;
+  font-size: 1.6em;
+  color: slategray;
+}
+
+#keyboard .row {
+  margin: auto;
+  margin-top: 30px;
+}
+
+#keyboard .row > * {
+  color: #2980b9;
+  font-style: italic;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 1.4em;
+}
+
+#forms h4 {
+  margin-top: 30px;
+  text-align: center;
+  color: #d35400;
+  font-style: italic;
+}
+
+#forms #myForm {
+  margin: auto;
+  margin-top: 30px;
+  width: 1200px;
+}
+
+#forms #myForm .form-group {
+  margin: 0 20px 0 20px;
+}
+
+#forms #myForm .form-check-input {
+  margin: 0 10px 0 0;
+}
+
+#forms #myForm button {
+  margin-left: 20px;
+}
+
+#forms #myForm a {
+  color: #d35400;
+}
+
+#forms #myForm input:focus, #forms #myForm select:focus {
+  border: 1px solid #d35400;
+}
+
+#forms #myForm #confirmMsg {
+  text-align: center;
+  margin-top: -20px;
+}
+
+#forms #myForm #confirmMsg.green {
+  color: #16a085;
+}
+
+#forms #myForm #confirmMsg.purple {
+  color: #9b59b6;
+}
+
+#forms #myForm #confirmMsg.blue {
+  color: #2980b9;
+}
+
+#forms #myForm .form-group, #forms #myForm .form-check {
+  height: 64px;
+  vertical-align: middle;
+  line-height: 64px;
+}
+
+#forms #errorMsg {
+  width: 900px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0px 20px;
+  color: #e74c3c;
+  font-size: 1.4em;
+  text-align: center;
+  font-style: italic;
 }

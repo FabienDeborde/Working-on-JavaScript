@@ -243,14 +243,15 @@ if (el.addEventListener) {
   });
 }
 
-// Load event
+// Load event (the scroll is not working on load but the console.log is...might try this later with jquery)
 
-function formFocus() {
-  var formInput = document.getElementById('email');
-  formInput.focus();
+function bottomPage() {
+  var maxHeight = document.body.scrollHeight - 900;
+  document.body.scrollTop = maxHeight;
+  console.log(maxHeight);
 }
 
-window.addEventListener('load', formFocus, false);
+window.addEventListener('load', bottomPage, false);
 
 // Focus and Blur events
 
@@ -335,23 +336,104 @@ function colors(){
 
   function changeColors(event) {
 
-    var locX =  event.clientX;
-    var locY = event.clientY;
+    var locX =  event.pageX; // Get the cursor X position relative to the page
+    var locY = event.pageY; // Get the cursor Y position relative to the page
+
+    var leftOffset = el.offsetLeft; // Get myCanvas left position relative to its offsetParent (nearest relative container, here body element)
+    var topOffset = el.offsetTop; // Get myCanvas top position relative to its offsetParent (nearest relative container, here body element)
+
+    var positionX = locX - leftOffset + 1; // Make the cursor X position start at 0 when entering the canvas left side
+    var positionY = locY - topOffset + 1; // Make the cursor Y position start at 0 when entering the canvas top side
+
+    var canvasWidth = el.offsetWidth; // Get the canvas width
+    var canvasHeight = el.offsetHeight; // Get the canvas height
 
     var red = 128;
-    var green = (3.927533782e-6 * (locX*locX) + 5.059437429e-1 * locX - 201.4786806).toFixed(0);
-    var blue = (4.533947935e-6 * (locY*locY) + 6.329905165e-1 * locY - 301.0561741).toFixed(0);
+    var green = (positionX*(255/canvasWidth)).toFixed(0); // Formula to convert the width to a 0-255 ranged width
+    var blue = (positionY*(255/canvasHeight)).toFixed(0); // Formula to convert the width to a 0-255 ranged width
     var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
+    // Update background color
     el.style.backgroundColor = rgb;
     elMsgColor = document.getElementById('myColor');
 
-    
+    // Write the rgb value
+    var msgColor = document.getElementById('myColor');
+    msgColor.textContent = rgb.toUpperCase();
 
-    console.log('x: ' + green);
-    console.log('y: ' + blue);
   }
 
-  var el = document.getElementById('myCanvas');
-  el.addEventListener('mousemove', changeColors, false);
+  var el = document.getElementById('myCanvas'); // Target my canvas
+  el.addEventListener('mousemove', changeColors, false); // Add it an event listener
 }
+
+// Keyboard Events
+
+keyboard();
+
+function keyboard() {
+
+  function charCount(e){
+
+    var textEntered = elInput.value; // Get the text entered
+    var counter = (100 - (textEntered.length)); // Get how many characters are left
+
+    var charDisplay = document.getElementById('charactersLeft');
+    var lastKey = document.getElementById('lastKey');
+
+    charDisplay.textContent = 'You have ' + counter + ' character(s) left';
+
+    lastKey.textContent = 'The last key entered was (in ASCII code): ' + e.keyCode;
+
+
+  }
+
+var elInput = document.getElementById('userInput');
+elInput.addEventListener('keydown', charCount, false); // could have used keypress but it doesn't fire when you use space char
+
+}
+
+// Form events
+
+function checkTerms(event) {
+  var checkbox = document.getElementById('check');
+
+  if (!checkbox.checked) {
+    var errorMsg = document.getElementById('errorMsg');
+    errorMsg.textContent = '* You must agree with our Terms of Services. *'
+    event.preventDefault();
+  }
+}
+
+function packageHint () {
+
+  var confirmMsg = document.getElementById('confirmMsg');
+  var selectedOption = this.options[this.selectedIndex].value;
+
+  switch (selectedOption) {
+    case 'Daily':
+      confirmMsg.textContent = 'Thanks a lot!';
+      confirmMsg.className = 'blue';
+      break;
+    case 'Weekly':
+      confirmMsg.textContent = 'Thank you!';
+      confirmMsg.className = 'green';
+      break;
+    case 'Monthly':
+      confirmMsg.textContent = 'Thank you!';
+      confirmMsg.className = 'green';
+      break;
+    case 'Yearly':
+      confirmMsg.textContent = 'Are you sure?';
+      confirmMsg.className = 'purple';
+      break;
+    default:
+      confirmMsg.textContent = '';
+  }
+}
+
+var elForm = document.getElementById('myForm');
+elForm.addEventListener('submit', checkTerms, false);
+
+var elSelect = document.getElementById('dropdownExample');
+elSelect.addEventListener('change', packageHint, false);
