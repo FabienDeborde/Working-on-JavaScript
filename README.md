@@ -6,10 +6,10 @@ I used [*Jade*](https://pugjs.org) (now pug) and [*Sass*](http://sass-lang.com/)
 
 I'll update this as I progress through the book.
 
-As of now, I finished the basic and intermediary part which you can check on [https://fabiendeborde.github.io/Working-on-JavaScript/Base/](https://fabiendeborde.github.io/Working-on-JavaScript/Base/).<br/>
+As of now, I finished the basic and intermediary parts. You can check them on [https://fabiendeborde.github.io/Working-on-JavaScript/Base/](https://fabiendeborde.github.io/Working-on-JavaScript/Base/).
 and [https://fabiendeborde.github.io/Working-on-JavaScript/Intermediary/](https://fabiendeborde.github.io/Working-on-JavaScript/Intermediary/).<br/>
 
-I made *12 scripts*:
+I made *22 scripts*:
 
   // Basic ones
   1. A price updater based on user input
@@ -25,7 +25,7 @@ I made *12 scripts*:
   11. A greeting message depending of the hour of the day, a message with today's date, a simple clock, a day/hour counter from a fixed date, an hour counter to a fixed date... (aka playing with the **Date global object**)
   12. A simple script using **for loop** to go through an array
 
-  // Intermediary ones
+// Intermediary ones
   13. Multiple ways to target elements, manipulate and traverse the DOM
   14. Multiple ways to use event hanlders and listeners and their fallback for IE8 and older
   15. A script using event delegation to remove list items from an unordered list
