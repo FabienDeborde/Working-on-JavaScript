@@ -136,7 +136,7 @@ function checkEmail() {
 }
 
 var elEmail = document.getElementById('email');
-elEmail.addEventListener('blur', checkEmail, false);
+elEmail.onblur = checkEmail;
 
 // Event listeners
 
