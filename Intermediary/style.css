@@ -38,7 +38,7 @@ hr {
   background-color: #969696;
 }
 
-#page .card h1 {
+#page .card h1, #page .card h2 {
   color: white;
 }
 
