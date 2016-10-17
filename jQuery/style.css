@@ -1,0 +1,31 @@
+body {
+  background-color: #ecf0f1;
+}
+
+h1, h2 {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+}
+
+hr {
+  width: 75%;
+  margin: 50px auto 30px auto;
+}
+
+#base ul {
+  width: 400px;
+  margin: 50px auto;
+}
+
+#base ul p {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
