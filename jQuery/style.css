@@ -1,5 +1,6 @@
 body {
   background-color: #ecf0f1;
+  margin-bottom: 350px;
 }
 
 h1, h2 {
@@ -17,15 +18,105 @@ hr {
   margin: 50px auto 30px auto;
 }
 
-#base ul {
+#base .list-group {
   width: 400px;
   margin: 50px auto;
 }
 
-#base ul p {
+#base .list-group p {
   background-color: gray;
   color: white;
   font-weight: bold;
   font-style: italic;
   text-align: center;
+}
+
+#base button.btn.btn-outline-info {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+}
+
+#base .myTable {
+  color: #ecf0f1;
+  width: 800px;
+  margin: auto;
+  display: none;
+}
+
+#base .myTable .tableRow {
+  display: flex;
+  text-align: center;
+}
+
+#base .myTable .tableRow .cell {
+  width: 200px;
+  padding: 10px 20px;
+  border: #ecf0f1 1px solid;
+  display: inline-block;
+}
+
+#base .myTable .tableRow #one {
+  background-color: #f1c40f;
+}
+
+#base .myTable .tableRow #two {
+  background-color: #1abc9c;
+}
+
+#base .myTable .tableRow #three {
+  background-color: #3498db;
+}
+
+#base .myTable .tableRow #four {
+  background-color: #9b59b6;
+}
+
+#base .myTable .tableRow #five {
+  background-color: #34495e;
+}
+
+#base .myTable .tableRow #six {
+  background-color: #f39c12;
+}
+
+#base .myTable .tableRow #seven {
+  background-color: #16a085;
+}
+
+#base .myTable .tableRow #eight {
+  background-color: #e74c3c;
+  left: 602px;
+}
+
+#base .myTable .tableRow #nine {
+  background-color: #2980b9;
+}
+
+#base .myTable .tableRow #ten {
+  background-color: #27ae60;
+}
+
+#base .myTable .tableRow #eleven {
+  background-color: #d35400;
+}
+
+#base .myTable .tableRow #twelve {
+  background-color: #2c3e50;
+}
+
+#base .myTable .tableRow #thirteen {
+  background-color: #8e44ad;
+}
+
+#base .myTable .tableRow #fourteen {
+  background-color: #c0392b;
+}
+
+#base .myTable .tableRow #fifteen {
+  background-color: #2ecc71;
+}
+
+#base .myTable .tableRow #sixteen {
+  background-color: #e67e22;
 }
