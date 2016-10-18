@@ -1,6 +1,5 @@
 body {
   background-color: #ecf0f1;
-  margin-bottom: 350px;
 }
 
 h1, h2 {
@@ -119,4 +118,74 @@ hr {
 
 #base .myTable .tableRow #sixteen {
   background-color: #e67e22;
+}
+
+#base .todo form, #base .todo #newItemButton {
+  margin-top: 25px;
+}
+
+#base .todo form #itemName, #base .todo #newItemButton #itemName {
+  padding: 11px 20px;
+}
+
+#base #todoComment {
+  margin-top: 25px;
+  text-align: center;
+  font-style: italic;
+}
+
+#base .outerBox {
+  position: relative;
+  background-color: #2c3e50;
+  height: 250px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 15px;
+}
+
+#base .outerBox .midBox {
+  position: absolute;
+  background-color: #2980b9;
+  height: 150px;
+  width: 50%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+}
+
+#base .outerBox .midBox .innerBox {
+  position: absolute;
+  background-color: #16a085;
+  height: 50px;
+  width: 25%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+}
+
+.end {
+  width: 200px;
+  height: 50px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 12px 20px;
+  border: 2px solid #c0392b;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  right: 25px;
+}
+
+.footer {
+  margin: 200px auto 0 auto;
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+  background-color: #34495e;
+  color: white;
 }

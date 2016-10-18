@@ -99,13 +99,6 @@ jQuery(document).ready(function($) {
 
   // Effects
 
-  // Scroll to bottom
-  $('html, body').animate({
-    scrollTop: $(document).height()-$(window).height()},
-    1000,
-    'swing'
-  );
-
   $(function(){
 
     $('#firstRow').hide().fadeIn(3000);
@@ -154,10 +147,88 @@ jQuery(document).ready(function($) {
 
   });
 
+  // Forms
+
+    var  $newItemButton = $('#newItemButton');
+    var $newItemForm = $('#newItemForm');
+    var $textInput = $('#newItemForm input:text');
+
+    $newItemButton.show();
+    $newItemForm.hide();
+
+    $('#showForm').on('click', function(){
+      $newItemButton.hide();
+      $newItemForm.show();
+    });
+
+    $newItemForm.on('submit', function(e){
+      e.preventDefault();
+      var newText = $textInput.val();
+      $('a:last').after('<a class="list-group-item list-group-item-action">' + newText + '</a>')
+      $newItemButton.show();
+      $newItemForm.hide();
+      $textInput.val('');
 
 
+    });
 
+  // Cutting part of the DOM
 
+  $(function(){
+    var $p = $('p#todoComment');
+    var $clonedComment = $p.clone();
 
+    $p.remove();
+    $clonedComment.insertAfter('.list');
+
+    var $moveItem = $('.todo a:first').detach();
+    $moveItem.insertAfter('.todo .list-group-item:last');
+
+  });
+
+  // Dimension
+
+  $(function () {
+    var outerHeight = $('.outerBox').outerHeight();
+    $('.outerBox').append('<p>Outer Height of the Outer Box: ' + outerHeight + 'px</p>');
+
+    var height = $('.midBox').height();
+    $('.midBox').append('<p>Height of the Mid Box: ' + height + 'px (no margin/border/padding)</p>');
+
+    var innerHeight = $('.innerBox').innerHeight();
+    $('.innerBox').append('<p>Inner Height of the Inner Box: ' + innerHeight + 'px</p>');
+    $('.innerBox').width('50%');
+
+  });
+
+  // Scroll to bottom
+  /*$('html, body').animate({
+    scrollTop: $(document).height()-$(window).height()},
+    1000,
+    'swing'
+  );*/
+
+  // Parallax footer
+
+  $(function () {
+    var $window = $(window);
+    var $slideMsg = $('.end');
+    var endZone = $('.footer').offset().top - $window.height() -250;
+
+    $window.on('scroll', function(){
+      if ((endZone) < $window.scrollTop()) {
+        $slideMsg.animate({
+          opacity: 1.0,
+        }, 700);
+        console.log('true' + endZone);
+      } else {
+        $slideMsg.stop(true).animate({
+          opacity: 0.0,
+        }, 700);
+        console.log('false' + endZone);
+      }
+    });
+
+  });
 
 });
