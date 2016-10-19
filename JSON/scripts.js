@@ -169,7 +169,6 @@ function ajaxReq() {
       $('.loading').remove();
     },
     success: function(data){
-      console.log(data);
       var msg = '';
       msg += '<span>" ' + data.quoteText + ' "</span>';
       msg += '<br><span>' + data.quoteAuthor + '</span>';
