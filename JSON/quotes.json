@@ -1,0 +1,244 @@
+{
+	"quotes": [
+		{
+			"id": "0",
+			"quote": "Anyone who has lost track of time when using a computer knows the propensity to dream, the urge to make dreams come true and the tendency to miss lunch.",
+			"author": "Tim Berners-Lee",
+			"date": "1955- ",
+			"activity": "Computer scientist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Tim_Berners-Lee_2012.jpg"
+		},
+		{
+			"id": "1",
+			"quote": "Be who you are and say what you feel, because those who mind don’t matter and those who matter don’t mind.",
+			"author": "Dr. Seuss",
+			"date": "1904-1991",
+			"activity": "Writer, Cartoonist, Author, Artist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ted_Geisel_NYWTS_2_crop.jpg/722px-Ted_Geisel_NYWTS_2_crop.jpg"
+		},
+		{
+			"id": "2",
+			"quote": "Do what you feel in your heart to be right, for you’ll be criticized anyway.",
+			"author": "Eleanor Roosevelt",
+			"date": "1884-1962",
+			"activity": "Politician, Diplomat, Activist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Eleanor_Roosevelt_cph.3b16000.jpg"
+		},
+		{
+			"id": "3",
+			"quote": "Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
+			"author": "Mark Twain",
+			"date": "1835-1910",
+			"activity": "Writer, Lecturer",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg"
+		},
+		{
+			"id": "4",
+			"quote": "I will not let anyone walk through my mind with their dirty feet.",
+			"author": "Mahatma Gandhi",
+			"date": "1969-1948",
+			"activity": "Civil rights activist, Philosopher, Politician",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Portrait_Gandhi.jpg/511px-Portrait_Gandhi.jpg"
+		},
+		{
+			"id": "5",
+			"quote": "Better to write for yourself and have no public, than to write for the public and have no self.",
+			"author": "Cyril Connolly",
+			"date": "1903-1974",
+			"activity": "Literary critic, Writer",
+			"image": "http://www.thefamouspeople.com/profiles/images/cyril-connolly-2.jpg"
+		},
+		{
+			"id": "6",
+			"quote": "We must not allow other people’s limited perceptions to define us.",
+			"author": "Virginia Satir",
+			"date": "1916-1988",
+			"activity": "Author, Social worker",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/1/14/VirginiaSatir.jpg"
+		},
+		{
+			"id": "7",
+			"quote": "Do what you can, with what you have, where you are.",
+			"author": "Theodore Roosevelt",
+			"date": "1858-1919",
+			"activity": "Author, Explorer, Politician",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/President_Roosevelt_-_Pach_Bros.tif/lossy-page1-544px-President_Roosevelt_-_Pach_Bros.tif.jpg"
+		},
+		{
+			"id": "8",
+			"quote": "Be yourself; everyone else is already taken.",
+			"author": "Oscar Wilde",
+			"date": "1854-1900",
+			"activity": "Author, Poet, Playwright",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Oscar_Wilde_Sarony.jpg/461px-Oscar_Wilde_Sarony.jpg"
+		},
+		{
+			"id": "9",
+			"quote": "Computers themselves, and software yet to be developed, will revolutionize the way we learn.",
+			"author": "Steve Jobs",
+			"date": "1955-2011",
+			"activity": "Information technology entrepreneur, Inventor",
+			"image": "https://c1.staticflickr.com/7/6220/6216457030_2cf0aff09d_b.jpg"
+		},
+		{
+			"id": "10",
+			"quote": "It does not matter how slowly you go as long as you do not stop.",
+			"author": "Confucius",
+			"date": "551 BC-479 BC ",
+			"activity": "Teacher, Philosopher, Politician",
+			"image": "https://c1.staticflickr.com/1/167/466866299_a78acb1584_b.jpg"
+		},
+		{
+			"id": "11",
+			"quote": "Reading computer manuals without the hardware is as frustrating as reading sex manuals without the software.",
+			"author": "Arthur C. Clarke",
+			"date": "1917-2008",
+			"activity": "Writer, Inventor",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Arthur_C._Clarke_%281982%29.jpg"
+		},
+		{
+			"id": "12",
+			"quote": "Never trust a computer you can't throw out a window.",
+			"author": "Steve Wozniak",
+			"date": "1950- ",
+			"activity": "Electronics engineer, Programmer",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Steve_Wozniak.jpg"
+		},
+		{
+			"id": "13",
+			"quote": "Great things in business are never done by one person. They're done by a team of people.",
+			"author": "Steve Jobs",
+			"date": "1955-2011",
+			"activity": "Information technology entrepreneur, Inventor",
+			"image": "https://c1.staticflickr.com/7/6220/6216457030_2cf0aff09d_b.jpg"
+		},
+		{
+			"id": "14",
+			"quote": "My favorite things in life don't cost any money. It's really clear that the most precious resource we all have is time.",
+			"author": "Steve Jobs",
+			"date": "1955-2011",
+			"activity": "Information technology entrepreneur, Inventor",
+			"image": "https://c1.staticflickr.com/7/6220/6216457030_2cf0aff09d_b.jpg"
+		},
+		{
+			"id": "15",
+			"quote": "The good news about computers is that they do what you tell them to do. The bad news is that they do what you tell them to do.",
+			"author": "Ted Nelson",
+			"date": "1937- ",
+			"activity": "Information technology pioneer, Philosopher, Sociologist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/641px-Ted_Nelson_cropped.jpg"
+		},
+		{
+			"id": "16",
+			"quote": "Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important.",
+			"author": "Bill Gates",
+			"date": "1955- ",
+			"activity": "Entrepreneur, Software Architect",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bill_Gates_June_2015.jpg"
+		},
+		{
+			"id": "17",
+			"quote": "It has become appallingly obvious that our technology has exceeded our humanity.",
+			"author": "Albert Einstein",
+			"date": "1879-1955",
+			"activity": "Theoretical Physicist, Philosopher",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/585px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg"
+		},
+		{
+			"id": "18",
+			"quote": "The real problem is not whether machines think but whether men do.",
+			"author": "B. F. Skinner",
+			"date": "1904-1990",
+			"activity": "Psychologist, Behaviorist, Author",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/B.F._Skinner_at_Harvard_circa_1950.jpg"
+		},
+		{
+			"id": "19",
+			"quote": "The Linux philosophy is 'Laugh in the face of danger'. Oops. Wrong One. 'Do it yourself'. Yes, that's it.",
+			"author": "Linus Torvalds",
+			"date": "1969- ",
+			"activity": "Software engineer",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg"
+		},
+		{
+			"id": "20",
+			"quote": "I'd much rather have 15 people arguing about something than 15 people splitting into two camps, each side convinced it's right and not talking to the other.",
+			"author": "Linus Torvalds",
+			"date": "1969- ",
+			"activity": "Software engineer",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg"
+		},
+		{
+			"id": "21",
+			"quote": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
+			"author": "Linus Torvalds",
+			"date": "1969- ",
+			"activity": "Software engineer",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg"
+		},
+		{
+			"id": "22",
+			"quote": "In order to carry a positive action we must develop here a positive vision.",
+			"author": "Tenzin Gyatso",
+			"date": "1950- ",
+			"activity": "14th Dalai Lama, Philosopher",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dalailama1_20121014_4639.jpg/650px-Dalailama1_20121014_4639.jpg"
+		},
+		{
+			"id": "23",
+			"quote": "A day without laughter is a day wasted.",
+			"author": "Charlie Chaplin",
+			"date": "1889-1977",
+			"activity": "Actor, Filmmaker, Composer, Director",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Charlie_Chaplin_portrait.jpg"
+		},
+		{
+			"id": "24",
+			"quote": "The technology keeps moving forward, which makes it easier for the artists to tell their stories and paint the pictures they want.",
+			"author": "George Lucas",
+			"date": "1944- ",
+			"activity": "Filmmaker, Entrepreneur",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/George_Lucas_cropped_2009.jpg"
+		},
+		{
+			"id": "25",
+			"quote": "It always seems impossible until its done.",
+			"author": "Nelson Mandela",
+			"date": "1918-2013 ",
+			"activity": "Activist, Poltician, Philanthropist",
+			"image": "https://c2.staticflickr.com/4/3800/9131421781_6143c95412_b.jpg"
+		},
+		{
+			"id": "26",
+			"quote": "Relying on the government to protect your privacy is like asking a peeping tom to install your window blinds.",
+			"author": "John Perry Barlow",
+			"date": "1947- ",
+			"activity": "Lyricist, Essayist, Political activist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/John_Perry_Barlow_%285%29.jpg/1024px-John_Perry_Barlow_%285%29.jpg"
+		},
+		{
+			"id": "27",
+			"quote": "The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.",
+			"author": "Tim Berners-Lee",
+			"date": "1955- ",
+			"activity": "Computer scientist",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Tim_Berners-Lee_2012.jpg"
+		},
+		{
+			"id": "28",
+			"quote": "The best road to progress is freedom's road.",
+			"author": "John F. Kennedy",
+			"date": "1917-1963",
+			"activity": "Politician",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/JFK_WHPO.tif/lossy-page1-601px-JFK_WHPO.tif.jpg"
+		},
+		{
+			"id": "29",
+			"quote": "Things do not happen. Things are made to happen.",
+			"author": "John F. Kennedy",
+			"date": "1917-1963",
+			"activity": "Politician",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/JFK_WHPO.tif/lossy-page1-601px-JFK_WHPO.tif.jpg"
+		}
+	]
+}
